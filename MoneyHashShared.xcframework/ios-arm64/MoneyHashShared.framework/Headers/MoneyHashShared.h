@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class MHSPaymentState, MHSDataState<T>, MHSCommonFlow<T>, MHSPaymentStateFailed, MHSPaymentStateSuccess, MHSPaymentStateUnknown, MHSKotlinUnit, MHSDataStateCompanion, MHSKotlinThrowable, MHSKotlinArray<T>, MHSAppException, MHSConstants, MHSKotlinEnumCompanion, MHSKotlinEnum<E>, MHSEnvironment, MHSKtor_client_coreHttpClient, MHSActiveTransaction, MHSActionDataCompanion, MHSActionData, MHSBillingData, MHSCustomField, MHSActiveTransactionCompanion, MHSBillingDataCompanion, MHSBrandSettingsCompanion, MHSBrandSettings, MHSCustomFieldCompanion, MHSIntent, MHSDataCompanion, MHSData, MHSPaymentMethodsItem, MHSIntentCompanion, MHSStatus, MHSPaymentInformationCompanion, MHSPaymentInformation, MHSPaymentMethodsItemCompanion, MHSStatusCompanion, MHSNetworkModule, MHSGetPaymentInformationUseCase, MHSKotlinException, MHSKotlinRuntimeException, MHSKotlinIllegalStateException, MHSKtor_client_coreHttpClientEngineConfig, MHSKtor_client_coreHttpClientConfig<T>, MHSKtor_client_coreHttpRequestBuilder, MHSKtor_client_coreHttpClientCall, MHSKotlinx_coroutines_coreCoroutineDispatcher, MHSKtor_client_coreHttpReceivePipeline, MHSKtor_client_coreHttpRequestPipeline, MHSKtor_client_coreHttpResponsePipeline, MHSKtor_client_coreHttpSendPipeline, MHSKtor_client_coreHttpRequestData, MHSKtor_client_coreHttpResponseData, MHSKtor_client_coreProxyConfig, MHSKotlinNothing, MHSKtor_httpHeadersBuilder, MHSKtor_client_coreHttpRequestBuilderCompanion, MHSKtor_httpURLBuilder, MHSKtor_httpHttpMethod, MHSKtor_client_coreHttpClientCallCompanion, MHSKtor_client_coreTypeInfo, MHSKtor_client_coreHttpResponse, MHSKtor_utilsAttributeKey<T>, MHSKotlinAbstractCoroutineContextElement, MHSKotlinx_coroutines_coreCoroutineDispatcherKey, MHSKtor_utilsPipelinePhase, MHSKtor_utilsPipeline<TSubject, TContext>, MHSKtor_client_coreHttpReceivePipelinePhases, MHSKtor_client_coreHttpRequestPipelinePhases, MHSKtor_client_coreHttpResponsePipelinePhases, MHSKtor_client_coreHttpResponseContainer, MHSKtor_client_coreHttpSendPipelinePhases, MHSKotlinx_serialization_coreSerializersModule, MHSKotlinx_serialization_coreSerialKind, MHSKtor_httpUrl, MHSKtor_httpOutgoingContent, MHSKtor_httpHttpStatusCode, MHSKtor_utilsGMTDate, MHSKtor_httpHttpProtocolVersion, MHSKtor_utilsStringValuesBuilder, MHSKtor_httpURLProtocol, MHSKtor_httpParametersBuilder, MHSKtor_httpURLBuilderCompanion, MHSKotlinCancellationException, MHSKtor_httpHttpMethodCompanion, MHSKtor_ioMemory, MHSKtor_ioIoBuffer, MHSKotlinByteArray, MHSKtor_ioByteReadPacket, MHSKtor_ioByteOrder, MHSKotlinAbstractCoroutineContextKey<B, E>, MHSKtor_httpUrlCompanion, MHSKtor_httpContentType, MHSKtor_httpHttpStatusCodeCompanion, MHSKtor_utilsGMTDateCompanion, MHSKtor_utilsWeekDay, MHSKtor_utilsMonth, MHSKtor_httpHttpProtocolVersionCompanion, MHSKtor_httpURLProtocolCompanion, MHSKtor_httpUrlEncodingOption, MHSKtor_ioMemoryCompanion, MHSKtor_ioBufferCompanion, MHSKtor_ioBuffer, MHSKtor_ioChunkBuffer, MHSKtor_ioChunkBufferCompanion, MHSKotlinCharArray, MHSKtor_ioIoBufferCompanion, MHSKotlinByteIterator, MHSKtor_ioAbstractInputCompanion, MHSKtor_ioAbstractInput, MHSKtor_ioByteReadPacketBaseCompanion, MHSKtor_ioByteReadPacketBase, MHSKtor_ioByteReadPacketPlatformBase, MHSKtor_ioByteReadPacketCompanion, MHSKtor_ioByteOrderCompanion, MHSKotlinKTypeProjection, MHSKtor_httpHeaderValueParam, MHSKtor_httpHeaderValueWithParametersCompanion, MHSKtor_httpHeaderValueWithParameters, MHSKtor_httpContentTypeCompanion, MHSKtor_utilsWeekDayCompanion, MHSKtor_utilsMonthCompanion, MHSKotlinx_coroutines_coreAtomicDesc, MHSKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, MHSKotlinCharIterator, MHSKotlinKVariance, MHSKotlinKTypeProjectionCompanion, MHSKotlinx_coroutines_coreAtomicOp<__contravariant T>, MHSKotlinx_coroutines_coreOpDescriptor, MHSKotlinx_coroutines_coreLockFreeLinkedListNode, MHSKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, MHSKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, MHSKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>;
+@class MHSPaymentState, MHSDataState<T>, MHSCommonFlow<T>, MHSPaymentStateFailed, MHSPaymentStateSuccess, MHSPaymentStateUnknown, MHSKotlinUnit, MHSDataStateCompanion, MHSKotlinThrowable, MHSKotlinArray<T>, MHSAppException, MHSConstants, MHSKotlinEnumCompanion, MHSKotlinEnum<E>, MHSEnvironment, MHSKtor_client_coreHttpClient, MHSActiveTransaction, MHSActionDataCompanion, MHSActionData, MHSActiveTransactionCompanion, MHSDataCompanion, MHSData, MHSStatus, MHSPaymentInformationCompanion, MHSPaymentInformation, MHSStatusCompanion, MHSNetworkModule, MHSGetPaymentInformationUseCase, MHSKotlinException, MHSKotlinRuntimeException, MHSKotlinIllegalStateException, MHSKtor_client_coreHttpClientEngineConfig, MHSKtor_client_coreHttpClientConfig<T>, MHSKtor_client_coreHttpRequestBuilder, MHSKtor_client_coreHttpClientCall, MHSKotlinx_coroutines_coreCoroutineDispatcher, MHSKtor_client_coreHttpReceivePipeline, MHSKtor_client_coreHttpRequestPipeline, MHSKtor_client_coreHttpResponsePipeline, MHSKtor_client_coreHttpSendPipeline, MHSKtor_client_coreHttpRequestData, MHSKtor_client_coreHttpResponseData, MHSKtor_client_coreProxyConfig, MHSKotlinNothing, MHSKtor_httpHeadersBuilder, MHSKtor_client_coreHttpRequestBuilderCompanion, MHSKtor_httpURLBuilder, MHSKtor_httpHttpMethod, MHSKtor_client_coreHttpClientCallCompanion, MHSKtor_client_coreTypeInfo, MHSKtor_client_coreHttpResponse, MHSKtor_utilsAttributeKey<T>, MHSKotlinAbstractCoroutineContextElement, MHSKotlinx_coroutines_coreCoroutineDispatcherKey, MHSKtor_utilsPipelinePhase, MHSKtor_utilsPipeline<TSubject, TContext>, MHSKtor_client_coreHttpReceivePipelinePhases, MHSKtor_client_coreHttpRequestPipelinePhases, MHSKtor_client_coreHttpResponsePipelinePhases, MHSKtor_client_coreHttpResponseContainer, MHSKtor_client_coreHttpSendPipelinePhases, MHSKotlinx_serialization_coreSerializersModule, MHSKotlinx_serialization_coreSerialKind, MHSKtor_httpUrl, MHSKtor_httpOutgoingContent, MHSKtor_httpHttpStatusCode, MHSKtor_utilsGMTDate, MHSKtor_httpHttpProtocolVersion, MHSKtor_utilsStringValuesBuilder, MHSKtor_httpURLProtocol, MHSKtor_httpParametersBuilder, MHSKtor_httpURLBuilderCompanion, MHSKotlinCancellationException, MHSKtor_httpHttpMethodCompanion, MHSKtor_ioMemory, MHSKtor_ioIoBuffer, MHSKotlinByteArray, MHSKtor_ioByteReadPacket, MHSKtor_ioByteOrder, MHSKotlinAbstractCoroutineContextKey<B, E>, MHSKtor_httpUrlCompanion, MHSKtor_httpContentType, MHSKtor_httpHttpStatusCodeCompanion, MHSKtor_utilsGMTDateCompanion, MHSKtor_utilsWeekDay, MHSKtor_utilsMonth, MHSKtor_httpHttpProtocolVersionCompanion, MHSKtor_httpURLProtocolCompanion, MHSKtor_httpUrlEncodingOption, MHSKtor_ioMemoryCompanion, MHSKtor_ioBufferCompanion, MHSKtor_ioBuffer, MHSKtor_ioChunkBuffer, MHSKtor_ioChunkBufferCompanion, MHSKotlinCharArray, MHSKtor_ioIoBufferCompanion, MHSKotlinByteIterator, MHSKtor_ioAbstractInputCompanion, MHSKtor_ioAbstractInput, MHSKtor_ioByteReadPacketBaseCompanion, MHSKtor_ioByteReadPacketBase, MHSKtor_ioByteReadPacketPlatformBase, MHSKtor_ioByteReadPacketCompanion, MHSKtor_ioByteOrderCompanion, MHSKotlinKTypeProjection, MHSKtor_httpHeaderValueParam, MHSKtor_httpHeaderValueWithParametersCompanion, MHSKtor_httpHeaderValueWithParameters, MHSKtor_httpContentTypeCompanion, MHSKtor_utilsWeekDayCompanion, MHSKtor_utilsMonthCompanion, MHSKotlinx_coroutines_coreAtomicDesc, MHSKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, MHSKotlinCharIterator, MHSKotlinKVariance, MHSKotlinKTypeProjectionCompanion, MHSKotlinx_coroutines_coreAtomicOp<__contravariant T>, MHSKotlinx_coroutines_coreOpDescriptor, MHSKotlinx_coroutines_coreLockFreeLinkedListNode, MHSKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, MHSKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, MHSKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>;
 
 @protocol MHSPaymentService, MHSKotlinx_coroutines_coreFlowCollector, MHSKotlinx_coroutines_coreFlow, MHSKotlinx_coroutines_coreCoroutineScope, MHSKotlinComparable, MHSKotlinx_serialization_coreKSerializer, MHSKotlinCoroutineContext, MHSKotlinIterator, MHSKtor_ioCloseable, MHSKtor_client_coreHttpClientEngine, MHSKtor_client_coreHttpClientEngineCapability, MHSKtor_utilsAttributes, MHSKotlinx_serialization_coreEncoder, MHSKotlinx_serialization_coreSerialDescriptor, MHSKotlinx_serialization_coreSerializationStrategy, MHSKotlinx_serialization_coreDecoder, MHSKotlinx_serialization_coreDeserializationStrategy, MHSKotlinCoroutineContextElement, MHSKotlinCoroutineContextKey, MHSKtor_client_coreHttpClientFeature, MHSKtor_httpHttpMessageBuilder, MHSKotlinx_coroutines_coreJob, MHSKtor_ioByteReadChannel, MHSKtor_utilsTypeInfo, MHSKtor_client_coreHttpRequest, MHSKotlinContinuation, MHSKotlinContinuationInterceptor, MHSKotlinx_coroutines_coreRunnable, MHSKotlinSuspendFunction2, MHSKotlinx_serialization_coreCompositeEncoder, MHSKotlinAnnotation, MHSKotlinx_serialization_coreCompositeDecoder, MHSKtor_httpHeaders, MHSKtor_utilsStringValues, MHSKotlinMapEntry, MHSKotlinx_coroutines_coreChildHandle, MHSKotlinx_coroutines_coreChildJob, MHSKotlinx_coroutines_coreDisposableHandle, MHSKotlinSequence, MHSKotlinx_coroutines_coreSelectClause0, MHSKtor_ioReadSession, MHSKotlinSuspendFunction1, MHSKotlinAppendable, MHSKotlinKType, MHSKotlinKClass, MHSKtor_httpHttpMessage, MHSKotlinFunction, MHSKotlinx_serialization_coreSerializersModuleCollector, MHSKtor_httpParameters, MHSKotlinx_coroutines_coreParentJob, MHSKotlinx_coroutines_coreSelectInstance, MHSKotlinSuspendFunction0, MHSKtor_ioObjectPool, MHSKtor_ioInput, MHSKtor_ioOutput, MHSKotlinKClassifier, MHSKotlinKDeclarationContainer, MHSKotlinKAnnotatedElement;
 
@@ -389,30 +389,16 @@ __attribute__((swift_name("ActionData.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ActiveTransaction")))
 @interface MHSActiveTransaction : MHSBase
-- (instancetype)initWithBillingData:(MHSBillingData * _Nullable)billingData amount:(MHSDouble * _Nullable)amount externalActionMessage:(NSArray<NSString *> * _Nullable)externalActionMessage customFields:(NSArray<MHSCustomField *> * _Nullable)customFields created:(NSString * _Nullable)created amountCurrency:(NSString * _Nullable)amountCurrency id:(NSString * _Nullable)id paymentMethodName:(NSString * _Nullable)paymentMethodName status:(NSString * _Nullable)status __attribute__((swift_name("init(billingData:amount:externalActionMessage:customFields:created:amountCurrency:id:paymentMethodName:status:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithExternalActionMessage:(NSArray<NSString *> * _Nullable)externalActionMessage id:(NSString * _Nullable)id __attribute__((swift_name("init(externalActionMessage:id:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MHSActiveTransactionCompanion *companion __attribute__((swift_name("companion")));
-- (MHSBillingData * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (MHSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSArray<NSString *> * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (NSArray<MHSCustomField *> * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
-- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
-- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
-- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (MHSActiveTransaction *)doCopyBillingData:(MHSBillingData * _Nullable)billingData amount:(MHSDouble * _Nullable)amount externalActionMessage:(NSArray<NSString *> * _Nullable)externalActionMessage customFields:(NSArray<MHSCustomField *> * _Nullable)customFields created:(NSString * _Nullable)created amountCurrency:(NSString * _Nullable)amountCurrency id:(NSString * _Nullable)id paymentMethodName:(NSString * _Nullable)paymentMethodName status:(NSString * _Nullable)status __attribute__((swift_name("doCopy(billingData:amount:externalActionMessage:customFields:created:amountCurrency:id:paymentMethodName:status:)")));
+- (NSArray<NSString *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (MHSActiveTransaction *)doCopyExternalActionMessage:(NSArray<NSString *> * _Nullable)externalActionMessage id:(NSString * _Nullable)id __attribute__((swift_name("doCopy(externalActionMessage:id:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) MHSDouble * _Nullable amount __attribute__((swift_name("amount")));
-@property (readonly) NSString * _Nullable amountCurrency __attribute__((swift_name("amountCurrency")));
-@property (readonly) MHSBillingData * _Nullable billingData __attribute__((swift_name("billingData")));
-@property (readonly) NSString * _Nullable created __attribute__((swift_name("created")));
-@property (readonly) NSArray<MHSCustomField *> * _Nullable customFields __attribute__((swift_name("customFields")));
 @property (readonly) NSArray<NSString *> * _Nullable externalActionMessage __attribute__((swift_name("externalActionMessage")));
 @property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
-@property (readonly) NSString * _Nullable paymentMethodName __attribute__((swift_name("paymentMethodName")));
-@property (readonly) NSString * _Nullable status __attribute__((swift_name("status")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -426,141 +412,18 @@ __attribute__((swift_name("ActiveTransaction.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("BillingData")))
-@interface MHSBillingData : MHSBase
-- (instancetype)initWithCountry:(NSString * _Nullable)country city:(NSString * _Nullable)city street:(NSString * _Nullable)street lastName:(NSString * _Nullable)lastName phoneNumber:(NSString * _Nullable)phoneNumber state:(NSString * _Nullable)state floor:(NSString * _Nullable)floor postalCode:(NSString * _Nullable)postalCode firstName:(NSString * _Nullable)firstName email:(NSString * _Nullable)email apartment:(NSString * _Nullable)apartment building:(NSString * _Nullable)building __attribute__((swift_name("init(country:city:street:lastName:phoneNumber:state:floor:postalCode:firstName:email:apartment:building:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MHSBillingDataCompanion *companion __attribute__((swift_name("companion")));
-- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
-- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
-- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
-- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
-- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
-- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (MHSBillingData *)doCopyCountry:(NSString * _Nullable)country city:(NSString * _Nullable)city street:(NSString * _Nullable)street lastName:(NSString * _Nullable)lastName phoneNumber:(NSString * _Nullable)phoneNumber state:(NSString * _Nullable)state floor:(NSString * _Nullable)floor postalCode:(NSString * _Nullable)postalCode firstName:(NSString * _Nullable)firstName email:(NSString * _Nullable)email apartment:(NSString * _Nullable)apartment building:(NSString * _Nullable)building __attribute__((swift_name("doCopy(country:city:street:lastName:phoneNumber:state:floor:postalCode:firstName:email:apartment:building:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable apartment __attribute__((swift_name("apartment")));
-@property (readonly) NSString * _Nullable building __attribute__((swift_name("building")));
-@property (readonly) NSString * _Nullable city __attribute__((swift_name("city")));
-@property (readonly) NSString * _Nullable country __attribute__((swift_name("country")));
-@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
-@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
-@property (readonly) NSString * _Nullable floor __attribute__((swift_name("floor")));
-@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
-@property (readonly) NSString * _Nullable phoneNumber __attribute__((swift_name("phoneNumber")));
-@property (readonly) NSString * _Nullable postalCode __attribute__((swift_name("postalCode")));
-@property (readonly) NSString * _Nullable state __attribute__((swift_name("state")));
-@property (readonly) NSString * _Nullable street __attribute__((swift_name("street")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("BillingData.Companion")))
-@interface MHSBillingDataCompanion : MHSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MHSBillingDataCompanion *shared __attribute__((swift_name("shared")));
-- (id<MHSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("BrandSettings")))
-@interface MHSBrandSettings : MHSBase
-- (instancetype)initWithBrandPrimaryColor:(NSString * _Nullable)brandPrimaryColor privacyPolicy:(NSString * _Nullable)privacyPolicy termsOfService:(NSString * _Nullable)termsOfService icon:(NSString * _Nullable)icon brandAccentColor:(NSString * _Nullable)brandAccentColor __attribute__((swift_name("init(brandPrimaryColor:privacyPolicy:termsOfService:icon:brandAccentColor:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MHSBrandSettingsCompanion *companion __attribute__((swift_name("companion")));
-- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (MHSBrandSettings *)doCopyBrandPrimaryColor:(NSString * _Nullable)brandPrimaryColor privacyPolicy:(NSString * _Nullable)privacyPolicy termsOfService:(NSString * _Nullable)termsOfService icon:(NSString * _Nullable)icon brandAccentColor:(NSString * _Nullable)brandAccentColor __attribute__((swift_name("doCopy(brandPrimaryColor:privacyPolicy:termsOfService:icon:brandAccentColor:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable brandAccentColor __attribute__((swift_name("brandAccentColor")));
-@property (readonly) NSString * _Nullable brandPrimaryColor __attribute__((swift_name("brandPrimaryColor")));
-@property (readonly) NSString * _Nullable icon __attribute__((swift_name("icon")));
-@property (readonly) NSString * _Nullable privacyPolicy __attribute__((swift_name("privacyPolicy")));
-@property (readonly) NSString * _Nullable termsOfService __attribute__((swift_name("termsOfService")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("BrandSettings.Companion")))
-@interface MHSBrandSettingsCompanion : MHSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MHSBrandSettingsCompanion *shared __attribute__((swift_name("shared")));
-- (id<MHSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("CustomField")))
-@interface MHSCustomField : MHSBase
-- (instancetype)initWithMinLength:(MHSInt * _Nullable)minLength readOnly:(MHSBoolean * _Nullable)readOnly label:(NSString * _Nullable)label type:(NSString * _Nullable)type value:(NSString * _Nullable)value required:(MHSBoolean * _Nullable)required errorMessages:(NSString * _Nullable)errorMessages fieldName:(NSString * _Nullable)fieldName maxLength:(MHSInt * _Nullable)maxLength helpText:(NSString * _Nullable)helpText __attribute__((swift_name("init(minLength:readOnly:label:type:value:required:errorMessages:fieldName:maxLength:helpText:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MHSCustomFieldCompanion *companion __attribute__((swift_name("companion")));
-- (MHSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
-- (MHSBoolean * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (MHSBoolean * _Nullable)component6 __attribute__((swift_name("component6()")));
-- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
-- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
-- (MHSInt * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (MHSCustomField *)doCopyMinLength:(MHSInt * _Nullable)minLength readOnly:(MHSBoolean * _Nullable)readOnly label:(NSString * _Nullable)label type:(NSString * _Nullable)type value:(NSString * _Nullable)value required:(MHSBoolean * _Nullable)required errorMessages:(NSString * _Nullable)errorMessages fieldName:(NSString * _Nullable)fieldName maxLength:(MHSInt * _Nullable)maxLength helpText:(NSString * _Nullable)helpText __attribute__((swift_name("doCopy(minLength:readOnly:label:type:value:required:errorMessages:fieldName:maxLength:helpText:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable errorMessages __attribute__((swift_name("errorMessages")));
-@property (readonly) NSString * _Nullable fieldName __attribute__((swift_name("fieldName")));
-@property (readonly) NSString * _Nullable helpText __attribute__((swift_name("helpText")));
-@property (readonly) NSString * _Nullable label __attribute__((swift_name("label")));
-@property (readonly) MHSInt * _Nullable maxLength __attribute__((swift_name("maxLength")));
-@property (readonly) MHSInt * _Nullable minLength __attribute__((swift_name("minLength")));
-@property (readonly) MHSBoolean * _Nullable readOnly __attribute__((swift_name("readOnly")));
-@property (readonly) MHSBoolean * _Nullable required __attribute__((swift_name("required")));
-@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
-@property (readonly) NSString * _Nullable value __attribute__((swift_name("value")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("CustomField.Companion")))
-@interface MHSCustomFieldCompanion : MHSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MHSCustomFieldCompanion *shared __attribute__((swift_name("shared")));
-- (id<MHSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Data")))
 @interface MHSData : MHSBase
-- (instancetype)initWithSelectedMethod:(NSString * _Nullable)selectedMethod brandSettings:(MHSBrandSettings * _Nullable)brandSettings nextAction:(NSString * _Nullable)nextAction intent:(MHSIntent * _Nullable)intent actionData:(MHSActionData * _Nullable)actionData __attribute__((swift_name("init(selectedMethod:brandSettings:nextAction:intent:actionData:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithNextAction:(NSString * _Nullable)nextAction actionData:(MHSActionData * _Nullable)actionData __attribute__((swift_name("init(nextAction:actionData:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MHSDataCompanion *companion __attribute__((swift_name("companion")));
 - (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (MHSBrandSettings * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (MHSIntent * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (MHSActionData * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (MHSData *)doCopySelectedMethod:(NSString * _Nullable)selectedMethod brandSettings:(MHSBrandSettings * _Nullable)brandSettings nextAction:(NSString * _Nullable)nextAction intent:(MHSIntent * _Nullable)intent actionData:(MHSActionData * _Nullable)actionData __attribute__((swift_name("doCopy(selectedMethod:brandSettings:nextAction:intent:actionData:)")));
+- (MHSActionData * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (MHSData *)doCopyNextAction:(NSString * _Nullable)nextAction actionData:(MHSActionData * _Nullable)actionData __attribute__((swift_name("doCopy(nextAction:actionData:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) MHSActionData * _Nullable actionData __attribute__((swift_name("actionData")));
-@property (readonly) MHSBrandSettings * _Nullable brandSettings __attribute__((swift_name("brandSettings")));
-@property (readonly) MHSIntent * _Nullable intent __attribute__((swift_name("intent")));
 @property (readonly) NSString * _Nullable nextAction __attribute__((swift_name("nextAction")));
-@property (readonly) NSString * _Nullable selectedMethod __attribute__((swift_name("selectedMethod")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -570,47 +433,6 @@ __attribute__((swift_name("Data.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MHSDataCompanion *shared __attribute__((swift_name("shared")));
-- (id<MHSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Intent")))
-@interface MHSIntent : MHSBase
-- (instancetype)initWithPaymentMethods:(NSArray<MHSPaymentMethodsItem *> * _Nullable)paymentMethods amount:(NSString * _Nullable)amount hideHeader:(MHSBoolean * _Nullable)hideHeader amountCurrency:(NSString * _Nullable)amountCurrency isLive:(MHSBoolean * _Nullable)isLive hideAmountSidebar:(MHSBoolean * _Nullable)hideAmountSidebar id:(NSString * _Nullable)id formOnly:(MHSBoolean * _Nullable)formOnly status:(NSString * _Nullable)status showSteps:(MHSBoolean * _Nullable)showSteps __attribute__((swift_name("init(paymentMethods:amount:hideHeader:amountCurrency:isLive:hideAmountSidebar:id:formOnly:status:showSteps:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MHSIntentCompanion *companion __attribute__((swift_name("companion")));
-- (NSArray<MHSPaymentMethodsItem *> * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (MHSBoolean * _Nullable)component10 __attribute__((swift_name("component10()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (MHSBoolean * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (MHSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (MHSBoolean * _Nullable)component6 __attribute__((swift_name("component6()")));
-- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
-- (MHSBoolean * _Nullable)component8 __attribute__((swift_name("component8()")));
-- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (MHSIntent *)doCopyPaymentMethods:(NSArray<MHSPaymentMethodsItem *> * _Nullable)paymentMethods amount:(NSString * _Nullable)amount hideHeader:(MHSBoolean * _Nullable)hideHeader amountCurrency:(NSString * _Nullable)amountCurrency isLive:(MHSBoolean * _Nullable)isLive hideAmountSidebar:(MHSBoolean * _Nullable)hideAmountSidebar id:(NSString * _Nullable)id formOnly:(MHSBoolean * _Nullable)formOnly status:(NSString * _Nullable)status showSteps:(MHSBoolean * _Nullable)showSteps __attribute__((swift_name("doCopy(paymentMethods:amount:hideHeader:amountCurrency:isLive:hideAmountSidebar:id:formOnly:status:showSteps:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable amount __attribute__((swift_name("amount")));
-@property (readonly) NSString * _Nullable amountCurrency __attribute__((swift_name("amountCurrency")));
-@property (readonly) MHSBoolean * _Nullable formOnly __attribute__((swift_name("formOnly")));
-@property (readonly) MHSBoolean * _Nullable hideAmountSidebar __attribute__((swift_name("hideAmountSidebar")));
-@property (readonly) MHSBoolean * _Nullable hideHeader __attribute__((swift_name("hideHeader")));
-@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
-@property (readonly) MHSBoolean * _Nullable isLive __attribute__((swift_name("isLive")));
-@property (readonly) NSArray<MHSPaymentMethodsItem *> * _Nullable paymentMethods __attribute__((swift_name("paymentMethods")));
-@property (readonly) MHSBoolean * _Nullable showSteps __attribute__((swift_name("showSteps")));
-@property (readonly) NSString * _Nullable status __attribute__((swift_name("status")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Intent.Companion")))
-@interface MHSIntentCompanion : MHSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MHSIntentCompanion *shared __attribute__((swift_name("shared")));
 - (id<MHSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
@@ -642,31 +464,6 @@ __attribute__((swift_name("PaymentInformation.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MHSPaymentInformationCompanion *shared __attribute__((swift_name("shared")));
-- (id<MHSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("PaymentMethodsItem")))
-@interface MHSPaymentMethodsItem : MHSBase
-- (instancetype)initWithPaymentMethodName:(NSString * _Nullable)paymentMethodName paymentMethod:(NSString * _Nullable)paymentMethod __attribute__((swift_name("init(paymentMethodName:paymentMethod:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MHSPaymentMethodsItemCompanion *companion __attribute__((swift_name("companion")));
-- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (MHSPaymentMethodsItem *)doCopyPaymentMethodName:(NSString * _Nullable)paymentMethodName paymentMethod:(NSString * _Nullable)paymentMethod __attribute__((swift_name("doCopy(paymentMethodName:paymentMethod:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable paymentMethod __attribute__((swift_name("paymentMethod")));
-@property (readonly) NSString * _Nullable paymentMethodName __attribute__((swift_name("paymentMethodName")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("PaymentMethodsItem.Companion")))
-@interface MHSPaymentMethodsItemCompanion : MHSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MHSPaymentMethodsItemCompanion *shared __attribute__((swift_name("shared")));
 - (id<MHSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
