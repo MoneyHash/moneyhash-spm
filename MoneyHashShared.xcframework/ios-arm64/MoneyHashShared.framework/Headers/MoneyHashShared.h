@@ -506,7 +506,7 @@ __attribute__((swift_name("PaymentService")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("NetworkModule")))
 @interface MHSNetworkModule : MHSBase
-- (instancetype)initWithEnvironment:(MHSEnvironment *)environment __attribute__((swift_name("init(environment:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithEnvironment:(MHSEnvironment *)environment enableLogs:(BOOL)enableLogs __attribute__((swift_name("init(environment:enableLogs:)"))) __attribute__((objc_designated_initializer));
 @property (readonly) id<MHSPaymentService> paymentService __attribute__((swift_name("paymentService")));
 @end;
 
