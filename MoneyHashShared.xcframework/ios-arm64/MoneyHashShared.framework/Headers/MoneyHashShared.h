@@ -377,6 +377,11 @@ __attribute__((swift_name("KotlinThrowable")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(MHSKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * @note annotations
+ *   kotlin.experimental.ExperimentalNativeApi
+*/
 - (MHSKotlinArray<NSString *> *)getStackTrace __attribute__((swift_name("getStackTrace()")));
 - (void)printStackTrace __attribute__((swift_name("printStackTrace()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -466,6 +471,7 @@ __attribute__((swift_name("Environment")))
 @property (class, readonly) MHSEnvironment *staging __attribute__((swift_name("staging")));
 @property (class, readonly) MHSEnvironment *production __attribute__((swift_name("production")));
 + (MHSKotlinArray<MHSEnvironment *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<MHSEnvironment *> *entries __attribute__((swift_name("entries")));
 @property (readonly) NSString *baseUrl __attribute__((swift_name("baseUrl")));
 @property (readonly) NSString *embedUrl __attribute__((swift_name("embedUrl")));
 @end
@@ -494,6 +500,7 @@ __attribute__((swift_name("Type")))
 @property (class, readonly) MHSType *payout __attribute__((swift_name("payout")));
 @property (class, readonly) MHSType *cards __attribute__((swift_name("cards")));
 + (MHSKotlinArray<MHSType *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<MHSType *> *entries __attribute__((swift_name("entries")));
 @property (readonly) NSString *resultSuffix __attribute__((swift_name("resultSuffix")));
 @property (readonly) NSString *type __attribute__((swift_name("type")));
 @end
@@ -1413,6 +1420,7 @@ __attribute__((swift_name("MethodType")))
 @property (class, readonly) MHSMethodType *paymentMethod __attribute__((swift_name("paymentMethod")));
 @property (class, readonly) MHSMethodType *payoutMethod __attribute__((swift_name("payoutMethod")));
 + (MHSKotlinArray<MHSMethodType *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<MHSMethodType *> *entries __attribute__((swift_name("entries")));
 @property (readonly) NSString *type __attribute__((swift_name("type")));
 @end
 
@@ -1907,6 +1915,7 @@ __attribute__((swift_name("IntentStatus")))
 @property (class, readonly) MHSIntentStatus *timeExpired __attribute__((swift_name("timeExpired")));
 @property (class, readonly) MHSIntentStatus *closed __attribute__((swift_name("closed")));
 + (MHSKotlinArray<MHSIntentStatus *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<MHSIntentStatus *> *entries __attribute__((swift_name("entries")));
 @property (readonly) NSString *status __attribute__((swift_name("status")));
 @end
 
@@ -1941,14 +1950,14 @@ __attribute__((swift_name("MethodMetaData")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OperationAmount")))
 @interface MHSOperationAmount : MHSBase <MHSCommonParcelable>
-- (instancetype)initWithCurrency:(NSString * _Nullable)currency value:(MHSInt * _Nullable)value __attribute__((swift_name("init(currency:value:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCurrency:(NSString * _Nullable)currency value:(MHSDouble * _Nullable)value __attribute__((swift_name("init(currency:value:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MHSOperationAmountCompanion *companion __attribute__((swift_name("companion")));
-- (MHSOperationAmount *)doCopyCurrency:(NSString * _Nullable)currency value:(MHSInt * _Nullable)value __attribute__((swift_name("doCopy(currency:value:)")));
+- (MHSOperationAmount *)doCopyCurrency:(NSString * _Nullable)currency value:(MHSDouble * _Nullable)value __attribute__((swift_name("doCopy(currency:value:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString * _Nullable currency __attribute__((swift_name("currency")));
-@property (readonly) MHSInt * _Nullable value __attribute__((swift_name("value")));
+@property (readonly) MHSDouble * _Nullable value __attribute__((swift_name("value")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -2046,6 +2055,7 @@ __attribute__((swift_name("State")))
 @property (class, readonly) MHSState *expired __attribute__((swift_name("expired")));
 @property (class, readonly) MHSState *closed __attribute__((swift_name("closed")));
 + (MHSKotlinArray<MHSState *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<MHSState *> *entries __attribute__((swift_name("entries")));
 @property (readonly) NSString *state __attribute__((swift_name("state")));
 @end
 
@@ -4320,6 +4330,7 @@ __attribute__((swift_name("KotlinKVariance")))
 @property (class, readonly) MHSKotlinKVariance *in __attribute__((swift_name("in")));
 @property (class, readonly) MHSKotlinKVariance *out __attribute__((swift_name("out")));
 + (MHSKotlinArray<MHSKotlinKVariance *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<MHSKotlinKVariance *> *entries __attribute__((swift_name("entries")));
 @end
 
 __attribute__((objc_subclassing_restricted))
