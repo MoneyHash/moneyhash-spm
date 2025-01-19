@@ -1278,9 +1278,9 @@ Classes:
       Type: "MHSType * _Nonnull"
     - Position: 2
       Type: "void (^ _Nonnull)(MHSIntentMethods * _Nullable, NSError * _Nullable)"
-  - Selector: "getMethodsCurrency:amount:customer:flowId:operation:completionHandler:"
+  - Selector: "getMethodsCurrency:amount:customer:flowId:operation:customFields:completionHandler:"
     MethodKind: "Instance"
-    SwiftName: "__getMethods(currency:amount:customer:flowId:operation:completionHandler:)"
+    SwiftName: "__getMethods(currency:amount:customer:flowId:operation:customFields:completionHandler:)"
     SwiftPrivate: true
     ResultType: "void"
     Parameters:
@@ -1295,6 +1295,8 @@ Classes:
     - Position: 4
       Type: "MHSIntentOperation * _Nullable"
     - Position: 5
+      Type: "NSDictionary<NSString *, MHSCustomFieldValue *> * _Nullable"
+    - Position: 6
       Type: "void (^ _Nonnull)(MHSIntentMethods * _Nullable, NSError * _Nullable)"
   - Selector: "getPaymentInformationPaymentId:completionHandler:"
     MethodKind: "Instance"
@@ -1316,9 +1318,9 @@ Classes:
       Type: "NSString * _Nonnull"
     - Position: 1
       Type: "void (^ _Nonnull)(MHSPayoutDetails * _Nullable, NSError * _Nullable)"
-  - Selector: "proceedWithPaymentMethodIntentId:selectedMethodId:methodType:metaData:completionHandler:"
+  - Selector: "proceedWithPaymentMethodIntentId:selectedMethodId:methodType:metaData:useWalletBalance:completionHandler:"
     MethodKind: "Instance"
-    SwiftName: "__proceedWithPaymentMethod(intentId:selectedMethodId:methodType:metaData:completionHandler:)"
+    SwiftName: "__proceedWithPaymentMethod(intentId:selectedMethodId:methodType:metaData:useWalletBalance:completionHandler:)"
     SwiftPrivate: true
     ResultType: "void"
     Parameters:
@@ -1331,6 +1333,8 @@ Classes:
     - Position: 3
       Type: "MHSMethodMetaData * _Nullable"
     - Position: 4
+      Type: "MHSBoolean * _Nullable"
+    - Position: 5
       Type: "void (^ _Nonnull)(MHSKotlinPair<MHSIntentMethods *, MHSPaymentInformation *> * _Nullable, NSError * _Nullable)"
   - Selector: "proceedWithPayoutMethodIntentId:selectedMethodId:methodType:metaData:completionHandler:"
     MethodKind: "Instance"
@@ -1846,6 +1850,10 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "intentSdkState"
     Type: "MHSIntentState * _Nullable"
+  - Name: "lastUsedMethod"
+    PropertyKind: "Instance"
+    SwiftName: "lastUsedMethod"
+    Type: "MHSLastUsedMethod * _Nullable"
   - Name: "nextAction"
     PropertyKind: "Instance"
     SwiftName: "nextAction"
@@ -1863,9 +1871,9 @@ Classes:
     SwiftName: "wallet"
     Type: "MHSDouble * _Nullable"
   Methods:
-  - Selector: "initWithIntentSdkState:selectedMethod:nextAction:intent:savedCards:wallet:brandSettings:actionData:"
+  - Selector: "initWithIntentSdkState:selectedMethod:nextAction:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:"
     MethodKind: "Instance"
-    SwiftName: "init(intentSdkState:selectedMethod:nextAction:intent:savedCards:wallet:brandSettings:actionData:)"
+    SwiftName: "init(intentSdkState:selectedMethod:nextAction:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:)"
     Parameters:
     - Position: 0
       Type: "MHSIntentState * _Nullable"
@@ -1883,9 +1891,11 @@ Classes:
       Type: "MHSBrandSettingsData * _Nullable"
     - Position: 7
       Type: "MHSIntentActionData * _Nullable"
-  - Selector: "doCopyIntentSdkState:selectedMethod:nextAction:intent:savedCards:wallet:brandSettings:actionData:"
+    - Position: 8
+      Type: "MHSLastUsedMethod * _Nullable"
+  - Selector: "doCopyIntentSdkState:selectedMethod:nextAction:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(intentSdkState:selectedMethod:nextAction:intent:savedCards:wallet:brandSettings:actionData:)"
+    SwiftName: "doCopy(intentSdkState:selectedMethod:nextAction:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:)"
     ResultType: "MHSPaymentInformation * _Nonnull"
     Parameters:
     - Position: 0
@@ -1904,6 +1914,8 @@ Classes:
       Type: "MHSBrandSettingsData * _Nullable"
     - Position: 7
       Type: "MHSIntentActionData * _Nullable"
+    - Position: 8
+      Type: "MHSLastUsedMethod * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
     SwiftName: "isEqual(_:)"
@@ -1934,6 +1946,97 @@ Classes:
     MethodKind: "Instance"
     SwiftName: "serializer()"
     ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+- Name: "MHSLastUsedMethod"
+  SwiftName: "LastUsedMethod"
+  Properties:
+  - Name: "id"
+    PropertyKind: "Instance"
+    SwiftName: "id"
+    Type: "NSString * _Nullable"
+  - Name: "type"
+    PropertyKind: "Instance"
+    SwiftName: "type"
+    Type: "MHSLastUsedMethodType * _Nullable"
+  Methods:
+  - Selector: "initWithType:id:"
+    MethodKind: "Instance"
+    SwiftName: "init(type:id:)"
+    Parameters:
+    - Position: 0
+      Type: "MHSLastUsedMethodType * _Nullable"
+    - Position: 1
+      Type: "NSString * _Nullable"
+  - Selector: "doCopyType:id:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(type:id:)"
+    ResultType: "MHSLastUsedMethod * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "MHSLastUsedMethodType * _Nullable"
+    - Position: 1
+      Type: "NSString * _Nullable"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "MHSLastUsedMethodCompanion"
+  SwiftName: "LastUsedMethod.Companion"
+  Methods:
+  - Selector: "serializer"
+    MethodKind: "Instance"
+    SwiftName: "serializer()"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+- Name: "MHSLastUsedMethodType"
+  SwiftBridge: "LastUsedMethodType"
+  SwiftName: "__LastUsedMethodType"
+  SwiftPrivate: true
+  Properties:
+  - Name: "type"
+    PropertyKind: "Instance"
+    SwiftName: "type"
+    Type: "NSString * _Nonnull"
+  - Name: "customerBalance"
+    PropertyKind: "Class"
+    SwiftName: "customerBalance"
+    Type: "MHSLastUsedMethodType * _Nonnull"
+  - Name: "saveCard"
+    PropertyKind: "Class"
+    SwiftName: "saveCard"
+    Type: "MHSLastUsedMethodType * _Nonnull"
+  - Name: "paymentMethod"
+    PropertyKind: "Class"
+    SwiftName: "paymentMethod"
+    Type: "MHSLastUsedMethodType * _Nonnull"
+  Methods:
+  - Selector: "initWithName:ordinal:"
+    MethodKind: "Instance"
+    SwiftName: "init(name:ordinal:)"
+    Availability: "nonswift"
+- Name: "MHSLastUsedMethodTypeCompanion"
+  SwiftName: "__LastUsedMethodType.Companion"
+  Methods:
+  - Selector: "serializer"
+    MethodKind: "Instance"
+    SwiftName: "serializer()"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+  - Selector: "serializerTypeParamsSerializers:"
+    MethodKind: "Instance"
+    SwiftName: "serializer(typeParamsSerializers:)"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "MHSKotlinArray<id<MHSKotlinx_serialization_coreKSerializer>> * _Nonnull"
 - Name: "MHSIntentActionData"
   SwiftName: "IntentActionData"
   Properties:
@@ -2487,10 +2590,14 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "supportedNetworks"
     Type: "NSArray<NSString *> * _Nullable"
+  - Name: "supportedRegions"
+    PropertyKind: "Instance"
+    SwiftName: "supportedRegions"
+    Type: "NSArray<NSString *> * _Nullable"
   Methods:
-  - Selector: "initWithCountryCode:merchantId:currencyCode:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:"
+  - Selector: "initWithCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:"
     MethodKind: "Instance"
-    SwiftName: "init(countryCode:merchantId:currencyCode:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:)"
+    SwiftName: "init(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:)"
     Parameters:
     - Position: 0
       Type: "NSString * _Nullable"
@@ -2499,18 +2606,20 @@ Classes:
     - Position: 2
       Type: "NSString * _Nullable"
     - Position: 3
-      Type: "MHSDouble * _Nullable"
-    - Position: 4
       Type: "NSArray<NSString *> * _Nullable"
+    - Position: 4
+      Type: "MHSDouble * _Nullable"
     - Position: 5
-      Type: "NSString * _Nullable"
+      Type: "NSArray<NSString *> * _Nullable"
     - Position: 6
       Type: "NSString * _Nullable"
     - Position: 7
       Type: "NSString * _Nullable"
-  - Selector: "doCopyCountryCode:merchantId:currencyCode:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:"
+    - Position: 8
+      Type: "NSString * _Nullable"
+  - Selector: "doCopyCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(countryCode:merchantId:currencyCode:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:)"
+    SwiftName: "doCopy(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:)"
     ResultType: "MHSNativePaymentData * _Nonnull"
     Parameters:
     - Position: 0
@@ -2520,14 +2629,16 @@ Classes:
     - Position: 2
       Type: "NSString * _Nullable"
     - Position: 3
-      Type: "MHSDouble * _Nullable"
-    - Position: 4
       Type: "NSArray<NSString *> * _Nullable"
+    - Position: 4
+      Type: "MHSDouble * _Nullable"
     - Position: 5
-      Type: "NSString * _Nullable"
+      Type: "NSArray<NSString *> * _Nullable"
     - Position: 6
       Type: "NSString * _Nullable"
     - Position: 7
+      Type: "NSString * _Nullable"
+    - Position: 8
       Type: "NSString * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
@@ -5255,10 +5366,14 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "supportedNetworks"
     Type: "NSArray<NSString *> * _Nullable"
+  - Name: "supportedRegions"
+    PropertyKind: "Instance"
+    SwiftName: "supportedRegions"
+    Type: "NSArray<NSString *> * _Nullable"
   Methods:
-  - Selector: "initWithCountryCode:merchantId:currencyCode:amount:supportedNetworks:"
+  - Selector: "initWithCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:"
     MethodKind: "Instance"
-    SwiftName: "init(countryCode:merchantId:currencyCode:amount:supportedNetworks:)"
+    SwiftName: "init(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:)"
     Parameters:
     - Position: 0
       Type: "NSString * _Nullable"
@@ -5267,12 +5382,14 @@ Classes:
     - Position: 2
       Type: "NSString * _Nullable"
     - Position: 3
-      Type: "MHSDouble * _Nullable"
-    - Position: 4
       Type: "NSArray<NSString *> * _Nullable"
-  - Selector: "doCopyCountryCode:merchantId:currencyCode:amount:supportedNetworks:"
+    - Position: 4
+      Type: "MHSDouble * _Nullable"
+    - Position: 5
+      Type: "NSArray<NSString *> * _Nullable"
+  - Selector: "doCopyCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(countryCode:merchantId:currencyCode:amount:supportedNetworks:)"
+    SwiftName: "doCopy(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:)"
     ResultType: "MHSNativePayDataApplePayData * _Nonnull"
     Parameters:
     - Position: 0
@@ -5282,8 +5399,10 @@ Classes:
     - Position: 2
       Type: "NSString * _Nullable"
     - Position: 3
-      Type: "MHSDouble * _Nullable"
+      Type: "NSArray<NSString *> * _Nullable"
     - Position: 4
+      Type: "MHSDouble * _Nullable"
+    - Position: 5
       Type: "NSArray<NSString *> * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
@@ -5895,6 +6014,237 @@ Classes:
     ResultType: "NSString * _Nonnull"
 - Name: "MHSPayoutDetailsCompanion"
   SwiftName: "PayoutDetails.Companion"
+  Methods:
+  - Selector: "serializer"
+    MethodKind: "Instance"
+    SwiftName: "serializer()"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+- Name: "MHSCustomFieldValue"
+  SwiftName: "CustomFieldValue"
+- Name: "MHSCustomFieldValueCompanion"
+  SwiftName: "CustomFieldValue.Companion"
+  Methods:
+  - Selector: "serializer"
+    MethodKind: "Instance"
+    SwiftName: "serializer()"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+  - Selector: "serializerTypeParamsSerializers:"
+    MethodKind: "Instance"
+    SwiftName: "serializer(typeParamsSerializers:)"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "MHSKotlinArray<id<MHSKotlinx_serialization_coreKSerializer>> * _Nonnull"
+- Name: "MHSCustomFieldValueBooleanValue"
+  SwiftName: "CustomFieldValue.BooleanValue"
+  Properties:
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "BOOL"
+  Methods:
+  - Selector: "initWithValue:"
+    MethodKind: "Instance"
+    SwiftName: "init(value:)"
+    Parameters:
+    - Position: 0
+      Type: "BOOL"
+  - Selector: "doCopyValue:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(value:)"
+    ResultType: "MHSCustomFieldValueBooleanValue * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "BOOL"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "MHSCustomFieldValueBooleanValueCompanion"
+  SwiftName: "CustomFieldValue.BooleanValueCompanion"
+  Methods:
+  - Selector: "serializer"
+    MethodKind: "Instance"
+    SwiftName: "serializer()"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+- Name: "MHSCustomFieldValueDoubleValue"
+  SwiftName: "CustomFieldValue.DoubleValue"
+  Properties:
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "double"
+  Methods:
+  - Selector: "initWithValue:"
+    MethodKind: "Instance"
+    SwiftName: "init(value:)"
+    Parameters:
+    - Position: 0
+      Type: "double"
+  - Selector: "doCopyValue:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(value:)"
+    ResultType: "MHSCustomFieldValueDoubleValue * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "double"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "MHSCustomFieldValueDoubleValueCompanion"
+  SwiftName: "CustomFieldValue.DoubleValueCompanion"
+  Methods:
+  - Selector: "serializer"
+    MethodKind: "Instance"
+    SwiftName: "serializer()"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+- Name: "MHSCustomFieldValueFloatValue"
+  SwiftName: "CustomFieldValue.FloatValue"
+  Properties:
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "float"
+  Methods:
+  - Selector: "initWithValue:"
+    MethodKind: "Instance"
+    SwiftName: "init(value:)"
+    Parameters:
+    - Position: 0
+      Type: "float"
+  - Selector: "doCopyValue:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(value:)"
+    ResultType: "MHSCustomFieldValueFloatValue * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "float"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "MHSCustomFieldValueFloatValueCompanion"
+  SwiftName: "CustomFieldValue.FloatValueCompanion"
+  Methods:
+  - Selector: "serializer"
+    MethodKind: "Instance"
+    SwiftName: "serializer()"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+- Name: "MHSCustomFieldValueIntValue"
+  SwiftName: "CustomFieldValue.IntValue"
+  Properties:
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "int32_t"
+  Methods:
+  - Selector: "initWithValue:"
+    MethodKind: "Instance"
+    SwiftName: "init(value:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "doCopyValue:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(value:)"
+    ResultType: "MHSCustomFieldValueIntValue * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "MHSCustomFieldValueIntValueCompanion"
+  SwiftName: "CustomFieldValue.IntValueCompanion"
+  Methods:
+  - Selector: "serializer"
+    MethodKind: "Instance"
+    SwiftName: "serializer()"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+- Name: "MHSCustomFieldValueStringValue"
+  SwiftName: "CustomFieldValue.StringValue"
+  Properties:
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "NSString * _Nonnull"
+  Methods:
+  - Selector: "initWithValue:"
+    MethodKind: "Instance"
+    SwiftName: "init(value:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "doCopyValue:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(value:)"
+    ResultType: "MHSCustomFieldValueStringValue * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "MHSCustomFieldValueStringValueCompanion"
+  SwiftName: "CustomFieldValue.StringValueCompanion"
   Methods:
   - Selector: "serializer"
     MethodKind: "Instance"
@@ -8168,14 +8518,16 @@ Classes:
     SwiftName: "httpClient"
     Type: "MHSKtor_client_coreHttpClient * _Nonnull"
   Methods:
-  - Selector: "initWithHttpClient:baseUrl:"
+  - Selector: "initWithHttpClient:baseUrl:enableLogs:"
     MethodKind: "Instance"
-    SwiftName: "init(httpClient:baseUrl:)"
+    SwiftName: "init(httpClient:baseUrl:enableLogs:)"
     Parameters:
     - Position: 0
       Type: "MHSKtor_client_coreHttpClient * _Nonnull"
     - Position: 1
       Type: "NSString * _Nonnull"
+    - Position: 2
+      Type: "BOOL"
   - Selector: "deleteRequestBuilder:completionHandler:"
     MethodKind: "Instance"
     SwiftName: "__delete(requestBuilder:completionHandler:)"
@@ -8226,9 +8578,9 @@ Classes:
       Type: "void (^ _Nonnull)(MHSRequestBuilder * _Nonnull)"
     - Position: 1
       Type: "void (^ _Nonnull)(id _Nullable_result, NSError * _Nullable)"
-  - Selector: "initWithBaseUrl:"
+  - Selector: "initWithBaseUrl:enableLogs:"
     MethodKind: "Instance"
-    SwiftName: "init(baseUrl:)"
+    SwiftName: "init(baseUrl:enableLogs:)"
     Availability: "nonswift"
 - Name: "MHSRequestBuilder"
   SwiftName: "RequestBuilder"
@@ -8291,17 +8643,23 @@ Classes:
 - Name: "MHSRequestContentBody"
   SwiftName: "RequestContentBody"
   Properties:
+  - Name: "bodyString"
+    PropertyKind: "Instance"
+    SwiftName: "bodyString"
+    Type: "NSString * _Nonnull"
   - Name: "value"
     PropertyKind: "Instance"
     SwiftName: "value"
     Type: "T _Nullable"
   Methods:
-  - Selector: "initWithValue:"
+  - Selector: "initWithValue:bodyString:"
     MethodKind: "Instance"
-    SwiftName: "init(value:)"
+    SwiftName: "init(value:bodyString:)"
     Parameters:
     - Position: 0
       Type: "T _Nullable"
+    - Position: 1
+      Type: "NSString * _Nonnull"
 - Name: "MHSRequestContentHeader"
   SwiftName: "RequestContent.Header"
   Properties:
@@ -8365,19 +8723,23 @@ Classes:
 - Name: "MHSKmmBaseService"
   SwiftName: "KmmBaseService"
   Methods:
-  - Selector: "initWithBaseUrl:"
+  - Selector: "initWithBaseUrl:enableLogs:"
     MethodKind: "Instance"
-    SwiftName: "init(baseUrl:)"
+    SwiftName: "init(baseUrl:enableLogs:)"
     Parameters:
     - Position: 0
       Type: "NSString * _Nonnull"
-  - Selector: "buildRequestRequestBuilder:"
+    - Position: 1
+      Type: "BOOL"
+  - Selector: "buildRequestRequestBuilder:method:"
     MethodKind: "Instance"
-    SwiftName: "buildRequest(requestBuilder:)"
+    SwiftName: "buildRequest(requestBuilder:method:)"
     ResultType: "MHSKtor_client_coreHttpRequestBuilder * _Nonnull"
     Parameters:
     - Position: 0
       Type: "MHSRequestBuilder * _Nonnull"
+    - Position: 1
+      Type: "MHSKtor_httpHttpMethod * _Nonnull"
 - Name: "MHSSandboxServiceImpl"
   SwiftName: "SandboxServiceImpl"
   Methods:
@@ -8504,6 +8866,10 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "currency"
     Type: "NSString * _Nonnull"
+  - Name: "customFields"
+    PropertyKind: "Instance"
+    SwiftName: "customFields"
+    Type: "NSDictionary<NSString *, MHSCustomFieldValue *> * _Nullable"
   - Name: "customer"
     PropertyKind: "Instance"
     SwiftName: "customer"
@@ -8517,9 +8883,9 @@ Classes:
     SwiftName: "operation"
     Type: "MHSIntentOperation * _Nullable"
   Methods:
-  - Selector: "initWithCurrency:amount:customer:flowId:operation:"
+  - Selector: "initWithCurrency:amount:customer:flowId:operation:customFields:"
     MethodKind: "Instance"
-    SwiftName: "init(currency:amount:customer:flowId:operation:)"
+    SwiftName: "init(currency:amount:customer:flowId:operation:customFields:)"
     Parameters:
     - Position: 0
       Type: "NSString * _Nonnull"
@@ -8531,9 +8897,11 @@ Classes:
       Type: "NSString * _Nullable"
     - Position: 4
       Type: "MHSIntentOperation * _Nullable"
-  - Selector: "doCopyCurrency:amount:customer:flowId:operation:"
+    - Position: 5
+      Type: "NSDictionary<NSString *, MHSCustomFieldValue *> * _Nullable"
+  - Selector: "doCopyCurrency:amount:customer:flowId:operation:customFields:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(currency:amount:customer:flowId:operation:)"
+    SwiftName: "doCopy(currency:amount:customer:flowId:operation:customFields:)"
     ResultType: "MHSPaymentMethodRequest * _Nonnull"
     Parameters:
     - Position: 0
@@ -8546,6 +8914,8 @@ Classes:
       Type: "NSString * _Nullable"
     - Position: 4
       Type: "MHSIntentOperation * _Nullable"
+    - Position: 5
+      Type: "NSDictionary<NSString *, MHSCustomFieldValue *> * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
     SwiftName: "isEqual(_:)"
@@ -8889,10 +9259,14 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "resetIntent"
     Type: "MHSBoolean * _Nullable"
+  - Name: "useWalletBalance"
+    PropertyKind: "Instance"
+    SwiftName: "useWalletBalance"
+    Type: "MHSBoolean * _Nullable"
   Methods:
-  - Selector: "initWithPaymentMethod:payoutMethod:resetIntent:"
+  - Selector: "initWithPaymentMethod:payoutMethod:resetIntent:useWalletBalance:"
     MethodKind: "Instance"
-    SwiftName: "init(paymentMethod:payoutMethod:resetIntent:)"
+    SwiftName: "init(paymentMethod:payoutMethod:resetIntent:useWalletBalance:)"
     Parameters:
     - Position: 0
       Type: "NSString * _Nullable"
@@ -8900,9 +9274,11 @@ Classes:
       Type: "NSString * _Nullable"
     - Position: 2
       Type: "MHSBoolean * _Nullable"
-  - Selector: "doCopyPaymentMethod:payoutMethod:resetIntent:"
+    - Position: 3
+      Type: "MHSBoolean * _Nullable"
+  - Selector: "doCopyPaymentMethod:payoutMethod:resetIntent:useWalletBalance:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(paymentMethod:payoutMethod:resetIntent:)"
+    SwiftName: "doCopy(paymentMethod:payoutMethod:resetIntent:useWalletBalance:)"
     ResultType: "MHSUpdateMethodRequest * _Nonnull"
     Parameters:
     - Position: 0
@@ -8910,6 +9286,8 @@ Classes:
     - Position: 1
       Type: "NSString * _Nullable"
     - Position: 2
+      Type: "MHSBoolean * _Nullable"
+    - Position: 3
       Type: "MHSBoolean * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
@@ -8944,24 +9322,32 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "cvv"
     Type: "NSString * _Nullable"
+  - Name: "useWalletBalance"
+    PropertyKind: "Instance"
+    SwiftName: "useWalletBalance"
+    Type: "MHSBoolean * _Nullable"
   Methods:
-  - Selector: "initWithCardTokenId:cvv:"
+  - Selector: "initWithCardTokenId:cvv:useWalletBalance:"
     MethodKind: "Instance"
-    SwiftName: "init(cardTokenId:cvv:)"
+    SwiftName: "init(cardTokenId:cvv:useWalletBalance:)"
     Parameters:
     - Position: 0
       Type: "NSString * _Nonnull"
     - Position: 1
       Type: "NSString * _Nullable"
-  - Selector: "doCopyCardTokenId:cvv:"
+    - Position: 2
+      Type: "MHSBoolean * _Nullable"
+  - Selector: "doCopyCardTokenId:cvv:useWalletBalance:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(cardTokenId:cvv:)"
+    SwiftName: "doCopy(cardTokenId:cvv:useWalletBalance:)"
     ResultType: "MHSUseCardTokenRequest * _Nonnull"
     Parameters:
     - Position: 0
       Type: "NSString * _Nonnull"
     - Position: 1
       Type: "NSString * _Nullable"
+    - Position: 2
+      Type: "MHSBoolean * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
     SwiftName: "isEqual(_:)"
@@ -9355,6 +9741,30 @@ Classes:
     MethodKind: "Instance"
     SwiftName: "serializer()"
     ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+- Name: "MHSCustomFieldValueSerializer"
+  SwiftName: "CustomFieldValueSerializer"
+  Properties:
+  - Name: "descriptor"
+    PropertyKind: "Instance"
+    SwiftName: "descriptor"
+    Type: "id<MHSKotlinx_serialization_coreSerialDescriptor> _Nonnull"
+  Methods:
+  - Selector: "deserializeDecoder:"
+    MethodKind: "Instance"
+    SwiftName: "deserialize(decoder:)"
+    ResultType: "MHSCustomFieldValue * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id<MHSKotlinx_serialization_coreDecoder> _Nonnull"
+  - Selector: "serializeEncoder:value:"
+    MethodKind: "Instance"
+    SwiftName: "serialize(encoder:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<MHSKotlinx_serialization_coreEncoder> _Nonnull"
+    - Position: 1
+      Type: "MHSCustomFieldValue * _Nonnull"
 - Name: "MHSAuthModule"
   SwiftName: "AuthModule"
   Properties:
@@ -13559,9 +13969,9 @@ Classes:
       Type: "MHSType * _Nonnull"
     - Position: 3
       Type: "MHSSkie_SuspendHandler * _Nonnull"
-  - Selector: "Skie_Suspend__6__getMethodsDispatchReceiver:currency:amount:customer:flowId:operation:suspendHandler:"
+  - Selector: "Skie_Suspend__6__getMethodsDispatchReceiver:currency:amount:customer:flowId:operation:customFields:suspendHandler:"
     MethodKind: "Class"
-    SwiftName: "Skie_Suspend__6__getMethods(dispatchReceiver:currency:amount:customer:flowId:operation:suspendHandler:)"
+    SwiftName: "Skie_Suspend__6__getMethods(dispatchReceiver:currency:amount:customer:flowId:operation:customFields:suspendHandler:)"
     Availability: "nonswift"
     ResultType: "void"
     Parameters:
@@ -13578,6 +13988,8 @@ Classes:
     - Position: 5
       Type: "MHSIntentOperation * _Nullable"
     - Position: 6
+      Type: "NSDictionary<NSString *, MHSCustomFieldValue *> * _Nullable"
+    - Position: 7
       Type: "MHSSkie_SuspendHandler * _Nonnull"
   - Selector: "Skie_Suspend__7__getPaymentInformationDispatchReceiver:paymentId:suspendHandler:"
     MethodKind: "Class"
@@ -13603,9 +14015,9 @@ Classes:
       Type: "NSString * _Nonnull"
     - Position: 2
       Type: "MHSSkie_SuspendHandler * _Nonnull"
-  - Selector: "Skie_Suspend__9__proceedWithPaymentMethodDispatchReceiver:intentId:selectedMethodId:methodType:metaData:suspendHandler:"
+  - Selector: "Skie_Suspend__9__proceedWithPaymentMethodDispatchReceiver:intentId:selectedMethodId:methodType:metaData:useWalletBalance:suspendHandler:"
     MethodKind: "Class"
-    SwiftName: "Skie_Suspend__9__proceedWithPaymentMethod(dispatchReceiver:intentId:selectedMethodId:methodType:metaData:suspendHandler:)"
+    SwiftName: "Skie_Suspend__9__proceedWithPaymentMethod(dispatchReceiver:intentId:selectedMethodId:methodType:metaData:useWalletBalance:suspendHandler:)"
     Availability: "nonswift"
     ResultType: "void"
     Parameters:
@@ -13620,6 +14032,8 @@ Classes:
     - Position: 4
       Type: "MHSMethodMetaData * _Nullable"
     - Position: 5
+      Type: "MHSBoolean * _Nullable"
+    - Position: 6
       Type: "MHSSkie_SuspendHandler * _Nonnull"
   - Selector: "Skie_Suspend__10__proceedWithPayoutMethodDispatchReceiver:intentId:selectedMethodId:methodType:metaData:suspendHandler:"
     MethodKind: "Class"
@@ -13795,9 +14209,9 @@ Classes:
       Type: "NSString * _Nonnull"
     - Position: 2
       Type: "MHSSkie_SuspendHandler * _Nonnull"
-  - Selector: "Skie_Suspend__22__getMethodsDispatchReceiver:publicKey:currency:amount:customer:flowId:operation:suspendHandler:"
+  - Selector: "Skie_Suspend__22__getMethodsDispatchReceiver:publicKey:currency:amount:customer:flowId:operation:customFields:suspendHandler:"
     MethodKind: "Class"
-    SwiftName: "Skie_Suspend__22__getMethods(dispatchReceiver:publicKey:currency:amount:customer:flowId:operation:suspendHandler:)"
+    SwiftName: "Skie_Suspend__22__getMethods(dispatchReceiver:publicKey:currency:amount:customer:flowId:operation:customFields:suspendHandler:)"
     Availability: "nonswift"
     ResultType: "void"
     Parameters:
@@ -13816,6 +14230,8 @@ Classes:
     - Position: 6
       Type: "MHSIntentOperation * _Nullable"
     - Position: 7
+      Type: "NSDictionary<NSString *, MHSCustomFieldValue *> * _Nullable"
+    - Position: 8
       Type: "MHSSkie_SuspendHandler * _Nonnull"
   - Selector: "Skie_Suspend__23__getPaymentInformationDispatchReceiver:paymentIntentId:suspendHandler:"
     MethodKind: "Class"
@@ -13947,9 +14363,9 @@ Classes:
       Type: "NSArray<MHSFeeItem *> * _Nonnull"
     - Position: 3
       Type: "MHSSkie_SuspendHandler * _Nonnull"
-  - Selector: "Skie_Suspend__32__usePaymentMethodDispatchReceiver:intentId:methodName:suspendHandler:"
+  - Selector: "Skie_Suspend__32__usePaymentMethodDispatchReceiver:intentId:methodName:useWalletBalance:suspendHandler:"
     MethodKind: "Class"
-    SwiftName: "Skie_Suspend__32__usePaymentMethod(dispatchReceiver:intentId:methodName:suspendHandler:)"
+    SwiftName: "Skie_Suspend__32__usePaymentMethod(dispatchReceiver:intentId:methodName:useWalletBalance:suspendHandler:)"
     Availability: "nonswift"
     ResultType: "void"
     Parameters:
@@ -13960,6 +14376,8 @@ Classes:
     - Position: 2
       Type: "NSString * _Nonnull"
     - Position: 3
+      Type: "MHSBoolean * _Nullable"
+    - Position: 4
       Type: "MHSSkie_SuspendHandler * _Nonnull"
   - Selector: "Skie_Suspend__33__usePayoutMethodDispatchReceiver:intentId:methodName:suspendHandler:"
     MethodKind: "Class"
@@ -13975,9 +14393,9 @@ Classes:
       Type: "NSString * _Nonnull"
     - Position: 3
       Type: "MHSSkie_SuspendHandler * _Nonnull"
-  - Selector: "Skie_Suspend__34__useSavedCardDispatchReceiver:paymentIntentId:cardTokenId:cvv:suspendHandler:"
+  - Selector: "Skie_Suspend__34__useSavedCardDispatchReceiver:paymentIntentId:cardTokenId:cvv:useWalletBalance:suspendHandler:"
     MethodKind: "Class"
-    SwiftName: "Skie_Suspend__34__useSavedCard(dispatchReceiver:paymentIntentId:cardTokenId:cvv:suspendHandler:)"
+    SwiftName: "Skie_Suspend__34__useSavedCard(dispatchReceiver:paymentIntentId:cardTokenId:cvv:useWalletBalance:suspendHandler:)"
     Availability: "nonswift"
     ResultType: "void"
     Parameters:
@@ -13990,6 +14408,8 @@ Classes:
     - Position: 3
       Type: "NSString * _Nullable"
     - Position: 4
+      Type: "MHSBoolean * _Nullable"
+    - Position: 5
       Type: "MHSSkie_SuspendHandler * _Nonnull"
   - Selector: "Skie_Suspend__35__useSelfWalletDispatchReceiver:paymentIntentId:suspendHandler:"
     MethodKind: "Class"
@@ -15539,9 +15959,9 @@ Protocols:
       Type: "NSString * _Nonnull"
     - Position: 1
       Type: "void (^ _Nonnull)(MHSCardDetails * _Nullable, NSError * _Nullable)"
-  - Selector: "getMethodsPublicKey:currency:amount:customer:flowId:operation:completionHandler:"
+  - Selector: "getMethodsPublicKey:currency:amount:customer:flowId:operation:customFields:completionHandler:"
     MethodKind: "Instance"
-    SwiftName: "__getMethods(publicKey:currency:amount:customer:flowId:operation:completionHandler:)"
+    SwiftName: "__getMethods(publicKey:currency:amount:customer:flowId:operation:customFields:completionHandler:)"
     SwiftPrivate: true
     ResultType: "void"
     Parameters:
@@ -15558,6 +15978,8 @@ Protocols:
     - Position: 5
       Type: "MHSIntentOperation * _Nullable"
     - Position: 6
+      Type: "NSDictionary<NSString *, MHSCustomFieldValue *> * _Nullable"
+    - Position: 7
       Type: "void (^ _Nonnull)(MHSPaymentMethodResponse * _Nullable, NSError * _Nullable)"
   - Selector: "getPaymentInformationPaymentIntentId:completionHandler:"
     MethodKind: "Instance"
@@ -15671,9 +16093,9 @@ Protocols:
       Type: "NSArray<MHSFeeItem *> * _Nonnull"
     - Position: 2
       Type: "void (^ _Nonnull)(MHSFeesResponse * _Nullable, NSError * _Nullable)"
-  - Selector: "usePaymentMethodIntentId:methodName:completionHandler:"
+  - Selector: "usePaymentMethodIntentId:methodName:useWalletBalance:completionHandler:"
     MethodKind: "Instance"
-    SwiftName: "__usePaymentMethod(intentId:methodName:completionHandler:)"
+    SwiftName: "__usePaymentMethod(intentId:methodName:useWalletBalance:completionHandler:)"
     SwiftPrivate: true
     ResultType: "void"
     Parameters:
@@ -15682,6 +16104,8 @@ Protocols:
     - Position: 1
       Type: "NSString * _Nonnull"
     - Position: 2
+      Type: "MHSBoolean * _Nullable"
+    - Position: 3
       Type: "void (^ _Nonnull)(MHSPaymentIntentData * _Nullable, NSError * _Nullable)"
   - Selector: "usePayoutMethodIntentId:methodName:completionHandler:"
     MethodKind: "Instance"
@@ -15695,9 +16119,9 @@ Protocols:
       Type: "NSString * _Nonnull"
     - Position: 2
       Type: "void (^ _Nonnull)(MHSPayoutDetails * _Nullable, NSError * _Nullable)"
-  - Selector: "useSavedCardPaymentIntentId:cardTokenId:cvv:completionHandler:"
+  - Selector: "useSavedCardPaymentIntentId:cardTokenId:cvv:useWalletBalance:completionHandler:"
     MethodKind: "Instance"
-    SwiftName: "__useSavedCard(paymentIntentId:cardTokenId:cvv:completionHandler:)"
+    SwiftName: "__useSavedCard(paymentIntentId:cardTokenId:cvv:useWalletBalance:completionHandler:)"
     SwiftPrivate: true
     ResultType: "void"
     Parameters:
@@ -15708,6 +16132,8 @@ Protocols:
     - Position: 2
       Type: "NSString * _Nullable"
     - Position: 3
+      Type: "MHSBoolean * _Nullable"
+    - Position: 4
       Type: "void (^ _Nonnull)(MHSPaymentIntentData * _Nullable, NSError * _Nullable)"
   - Selector: "useSelfWalletPaymentIntentId:completionHandler:"
     MethodKind: "Instance"
