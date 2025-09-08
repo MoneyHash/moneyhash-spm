@@ -3518,6 +3518,8 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("NativePayData.GooglePay")))
 @interface MHSNativePayDataGooglePay : MHSNativePayData <MHSCommonParcelable>
 @property (class, readonly, getter=companion) MHSNativePayDataGooglePayCompanion *companion __attribute__((swift_name("companion")));
+@property (readonly) NSArray<NSString *> * _Nullable allowedCardAuthMethods __attribute__((swift_name("allowedCardAuthMethods")));
+@property (readonly) NSArray<NSString *> * _Nullable allowedCardNetworks __attribute__((swift_name("allowedCardNetworks")));
 @property (readonly) MHSDouble * _Nullable amount __attribute__((swift_name("amount")));
 @property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
 @property (readonly) NSString * _Nullable currencyCode __attribute__((swift_name("currencyCode")));
@@ -3525,11 +3527,21 @@ __attribute__((swift_name("NativePayData.GooglePay")))
 @property (readonly) NSString * _Nullable gatewayMerchantID __attribute__((swift_name("gatewayMerchantID")));
 @property (readonly) NSString * _Nullable merchantId __attribute__((swift_name("merchantId")));
 @property (readonly) NSString * _Nullable merchantName __attribute__((swift_name("merchantName")));
-- (instancetype)initWithCountryCode:(NSString * _Nullable)countryCode gateway:(NSString * _Nullable)gateway currencyCode:(NSString * _Nullable)currencyCode amount:(MHSDouble * _Nullable)amount gatewayMerchantID:(NSString * _Nullable)gatewayMerchantID merchantId:(NSString * _Nullable)merchantId merchantName:(NSString * _Nullable)merchantName __attribute__((swift_name("init(countryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:)"))) __attribute__((objc_designated_initializer));
-- (MHSNativePayDataGooglePay *)doCopyCountryCode:(NSString * _Nullable)countryCode gateway:(NSString * _Nullable)gateway currencyCode:(NSString * _Nullable)currencyCode amount:(MHSDouble * _Nullable)amount gatewayMerchantID:(NSString * _Nullable)gatewayMerchantID merchantId:(NSString * _Nullable)merchantId merchantName:(NSString * _Nullable)merchantName __attribute__((swift_name("doCopy(countryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:)")));
+- (instancetype)initWithCountryCode:(NSString * _Nullable)countryCode gateway:(NSString * _Nullable)gateway currencyCode:(NSString * _Nullable)currencyCode amount:(MHSDouble * _Nullable)amount gatewayMerchantID:(NSString * _Nullable)gatewayMerchantID merchantId:(NSString * _Nullable)merchantId merchantName:(NSString * _Nullable)merchantName allowedCardNetworks:(NSArray<NSString *> * _Nullable)allowedCardNetworks allowedCardAuthMethods:(NSArray<NSString *> * _Nullable)allowedCardAuthMethods __attribute__((swift_name("init(countryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:allowedCardNetworks:allowedCardAuthMethods:)"))) __attribute__((objc_designated_initializer));
+- (MHSNativePayDataGooglePay *)doCopyCountryCode:(NSString * _Nullable)countryCode gateway:(NSString * _Nullable)gateway currencyCode:(NSString * _Nullable)currencyCode amount:(MHSDouble * _Nullable)amount gatewayMerchantID:(NSString * _Nullable)gatewayMerchantID merchantId:(NSString * _Nullable)merchantId merchantName:(NSString * _Nullable)merchantName allowedCardNetworks:(NSArray<NSString *> * _Nullable)allowedCardNetworks allowedCardAuthMethods:(NSArray<NSString *> * _Nullable)allowedCardAuthMethods __attribute__((swift_name("doCopy(countryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:allowedCardNetworks:allowedCardAuthMethods:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.SerialName(value="allowed_card_auth_methods")
+*/
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.SerialName(value="allowed_card_networks")
+*/
 
 /**
  * @note annotations
@@ -3586,6 +3598,8 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("NativePaymentData")))
 @interface MHSNativePaymentData : MHSBase <MHSCommonParcelable>
 @property (class, readonly, getter=companion) MHSNativePaymentDataCompanion *companion __attribute__((swift_name("companion")));
+@property (readonly) NSArray<NSString *> * _Nullable allowedCardAuthMethods __attribute__((swift_name("allowedCardAuthMethods")));
+@property (readonly) NSArray<NSString *> * _Nullable allowedCardNetworks __attribute__((swift_name("allowedCardNetworks")));
 @property (readonly) MHSDouble * _Nullable amount __attribute__((swift_name("amount")));
 @property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
 @property (readonly) NSString * _Nullable currencyCode __attribute__((swift_name("currencyCode")));
@@ -3597,11 +3611,21 @@ __attribute__((swift_name("NativePaymentData")))
 @property (readonly) NSString * _Nullable methodID __attribute__((swift_name("methodID")));
 @property (readonly) NSArray<NSString *> * _Nullable supportedNetworks __attribute__((swift_name("supportedNetworks")));
 @property (readonly) NSArray<NSString *> * _Nullable supportedRegions __attribute__((swift_name("supportedRegions")));
-- (instancetype)initWithCountryCode:(NSString * _Nullable)countryCode merchantId:(NSString * _Nullable)merchantId currencyCode:(NSString * _Nullable)currencyCode supportedRegions:(NSArray<NSString *> * _Nullable)supportedRegions amount:(MHSDouble * _Nullable)amount supportedNetworks:(NSArray<NSString *> * _Nullable)supportedNetworks gateway:(NSString * _Nullable)gateway gatewayMerchantID:(NSString * _Nullable)gatewayMerchantID merchantName:(NSString * _Nullable)merchantName methodID:(NSString * _Nullable)methodID merchantCapabilities:(NSArray<NSString *> * _Nullable)merchantCapabilities __attribute__((swift_name("init(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:)"))) __attribute__((objc_designated_initializer));
-- (MHSNativePaymentData *)doCopyCountryCode:(NSString * _Nullable)countryCode merchantId:(NSString * _Nullable)merchantId currencyCode:(NSString * _Nullable)currencyCode supportedRegions:(NSArray<NSString *> * _Nullable)supportedRegions amount:(MHSDouble * _Nullable)amount supportedNetworks:(NSArray<NSString *> * _Nullable)supportedNetworks gateway:(NSString * _Nullable)gateway gatewayMerchantID:(NSString * _Nullable)gatewayMerchantID merchantName:(NSString * _Nullable)merchantName methodID:(NSString * _Nullable)methodID merchantCapabilities:(NSArray<NSString *> * _Nullable)merchantCapabilities __attribute__((swift_name("doCopy(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:)")));
+- (instancetype)initWithCountryCode:(NSString * _Nullable)countryCode merchantId:(NSString * _Nullable)merchantId currencyCode:(NSString * _Nullable)currencyCode supportedRegions:(NSArray<NSString *> * _Nullable)supportedRegions amount:(MHSDouble * _Nullable)amount supportedNetworks:(NSArray<NSString *> * _Nullable)supportedNetworks gateway:(NSString * _Nullable)gateway gatewayMerchantID:(NSString * _Nullable)gatewayMerchantID merchantName:(NSString * _Nullable)merchantName methodID:(NSString * _Nullable)methodID merchantCapabilities:(NSArray<NSString *> * _Nullable)merchantCapabilities allowedCardNetworks:(NSArray<NSString *> * _Nullable)allowedCardNetworks allowedCardAuthMethods:(NSArray<NSString *> * _Nullable)allowedCardAuthMethods __attribute__((swift_name("init(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:)"))) __attribute__((objc_designated_initializer));
+- (MHSNativePaymentData *)doCopyCountryCode:(NSString * _Nullable)countryCode merchantId:(NSString * _Nullable)merchantId currencyCode:(NSString * _Nullable)currencyCode supportedRegions:(NSArray<NSString *> * _Nullable)supportedRegions amount:(MHSDouble * _Nullable)amount supportedNetworks:(NSArray<NSString *> * _Nullable)supportedNetworks gateway:(NSString * _Nullable)gateway gatewayMerchantID:(NSString * _Nullable)gatewayMerchantID merchantName:(NSString * _Nullable)merchantName methodID:(NSString * _Nullable)methodID merchantCapabilities:(NSArray<NSString *> * _Nullable)merchantCapabilities allowedCardNetworks:(NSArray<NSString *> * _Nullable)allowedCardNetworks allowedCardAuthMethods:(NSArray<NSString *> * _Nullable)allowedCardAuthMethods __attribute__((swift_name("doCopy(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.SerialName(value="allowed_card_auth_methods")
+*/
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.SerialName(value="allowed_card_networks")
+*/
 
 /**
  * @note annotations
