@@ -1639,6 +1639,10 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "fingerprint"
     Type: "NSString * _Nullable"
+  - Name: "firstEightDigits"
+    PropertyKind: "Instance"
+    SwiftName: "firstEightDigits"
+    Type: "NSString * _Nullable"
   - Name: "firstSixDigits"
     PropertyKind: "Instance"
     SwiftName: "firstSixDigits"
@@ -1656,9 +1660,9 @@ Classes:
     SwiftName: "saveCard"
     Type: "MHSBoolean * _Nullable"
   Methods:
-  - Selector: "initWithFirstSixDigits:lastFourDigits:cardScheme:cardHolderName:expiryYear:expiryMonth:isLive:accessToken:cardToken:cvv:saveCard:fingerprint:"
+  - Selector: "initWithFirstSixDigits:firstEightDigits:lastFourDigits:cardScheme:cardHolderName:expiryYear:expiryMonth:isLive:accessToken:cardToken:cvv:saveCard:fingerprint:"
     MethodKind: "Instance"
-    SwiftName: "init(firstSixDigits:lastFourDigits:cardScheme:cardHolderName:expiryYear:expiryMonth:isLive:accessToken:cardToken:cvv:saveCard:fingerprint:)"
+    SwiftName: "init(firstSixDigits:firstEightDigits:lastFourDigits:cardScheme:cardHolderName:expiryYear:expiryMonth:isLive:accessToken:cardToken:cvv:saveCard:fingerprint:)"
     Parameters:
     - Position: 0
       Type: "NSString * _Nullable"
@@ -1673,20 +1677,22 @@ Classes:
     - Position: 5
       Type: "NSString * _Nullable"
     - Position: 6
-      Type: "MHSBoolean * _Nullable"
-    - Position: 7
       Type: "NSString * _Nullable"
+    - Position: 7
+      Type: "MHSBoolean * _Nullable"
     - Position: 8
       Type: "NSString * _Nullable"
     - Position: 9
       Type: "NSString * _Nullable"
     - Position: 10
-      Type: "MHSBoolean * _Nullable"
-    - Position: 11
       Type: "NSString * _Nullable"
-  - Selector: "doCopyFirstSixDigits:lastFourDigits:cardScheme:cardHolderName:expiryYear:expiryMonth:isLive:accessToken:cardToken:cvv:saveCard:fingerprint:"
+    - Position: 11
+      Type: "MHSBoolean * _Nullable"
+    - Position: 12
+      Type: "NSString * _Nullable"
+  - Selector: "doCopyFirstSixDigits:firstEightDigits:lastFourDigits:cardScheme:cardHolderName:expiryYear:expiryMonth:isLive:accessToken:cardToken:cvv:saveCard:fingerprint:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(firstSixDigits:lastFourDigits:cardScheme:cardHolderName:expiryYear:expiryMonth:isLive:accessToken:cardToken:cvv:saveCard:fingerprint:)"
+    SwiftName: "doCopy(firstSixDigits:firstEightDigits:lastFourDigits:cardScheme:cardHolderName:expiryYear:expiryMonth:isLive:accessToken:cardToken:cvv:saveCard:fingerprint:)"
     ResultType: "MHSVaultData * _Nonnull"
     Parameters:
     - Position: 0
@@ -1702,16 +1708,18 @@ Classes:
     - Position: 5
       Type: "NSString * _Nullable"
     - Position: 6
-      Type: "MHSBoolean * _Nullable"
-    - Position: 7
       Type: "NSString * _Nullable"
+    - Position: 7
+      Type: "MHSBoolean * _Nullable"
     - Position: 8
       Type: "NSString * _Nullable"
     - Position: 9
       Type: "NSString * _Nullable"
     - Position: 10
-      Type: "MHSBoolean * _Nullable"
+      Type: "NSString * _Nullable"
     - Position: 11
+      Type: "MHSBoolean * _Nullable"
+    - Position: 12
       Type: "NSString * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
@@ -3200,6 +3208,14 @@ Classes:
 - Name: "MHSNativePaymentData"
   SwiftName: "NativePaymentData"
   Properties:
+  - Name: "allowedCardAuthMethods"
+    PropertyKind: "Instance"
+    SwiftName: "allowedCardAuthMethods"
+    Type: "NSArray<NSString *> * _Nullable"
+  - Name: "allowedCardNetworks"
+    PropertyKind: "Instance"
+    SwiftName: "allowedCardNetworks"
+    Type: "NSArray<NSString *> * _Nullable"
   - Name: "amount"
     PropertyKind: "Instance"
     SwiftName: "amount"
@@ -3245,9 +3261,9 @@ Classes:
     SwiftName: "supportedRegions"
     Type: "NSArray<NSString *> * _Nullable"
   Methods:
-  - Selector: "initWithCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:"
+  - Selector: "initWithCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:"
     MethodKind: "Instance"
-    SwiftName: "init(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:)"
+    SwiftName: "init(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:)"
     Parameters:
     - Position: 0
       Type: "NSString * _Nullable"
@@ -3271,9 +3287,13 @@ Classes:
       Type: "NSString * _Nullable"
     - Position: 10
       Type: "NSArray<NSString *> * _Nullable"
-  - Selector: "doCopyCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:"
+    - Position: 11
+      Type: "NSArray<NSString *> * _Nullable"
+    - Position: 12
+      Type: "NSArray<NSString *> * _Nullable"
+  - Selector: "doCopyCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:)"
+    SwiftName: "doCopy(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:)"
     ResultType: "MHSNativePaymentData * _Nonnull"
     Parameters:
     - Position: 0
@@ -3297,6 +3317,10 @@ Classes:
     - Position: 9
       Type: "NSString * _Nullable"
     - Position: 10
+      Type: "NSArray<NSString *> * _Nullable"
+    - Position: 11
+      Type: "NSArray<NSString *> * _Nullable"
+    - Position: 12
       Type: "NSArray<NSString *> * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
@@ -8016,6 +8040,14 @@ Classes:
 - Name: "MHSNativePayDataGooglePay"
   SwiftName: "NativePayData.GooglePay"
   Properties:
+  - Name: "allowedCardAuthMethods"
+    PropertyKind: "Instance"
+    SwiftName: "allowedCardAuthMethods"
+    Type: "NSArray<NSString *> * _Nullable"
+  - Name: "allowedCardNetworks"
+    PropertyKind: "Instance"
+    SwiftName: "allowedCardNetworks"
+    Type: "NSArray<NSString *> * _Nullable"
   - Name: "amount"
     PropertyKind: "Instance"
     SwiftName: "amount"
@@ -8045,9 +8077,9 @@ Classes:
     SwiftName: "merchantName"
     Type: "NSString * _Nullable"
   Methods:
-  - Selector: "initWithCountryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:"
+  - Selector: "initWithCountryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:allowedCardNetworks:allowedCardAuthMethods:"
     MethodKind: "Instance"
-    SwiftName: "init(countryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:)"
+    SwiftName: "init(countryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:allowedCardNetworks:allowedCardAuthMethods:)"
     Parameters:
     - Position: 0
       Type: "NSString * _Nullable"
@@ -8063,9 +8095,13 @@ Classes:
       Type: "NSString * _Nullable"
     - Position: 6
       Type: "NSString * _Nullable"
-  - Selector: "doCopyCountryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:"
+    - Position: 7
+      Type: "NSArray<NSString *> * _Nullable"
+    - Position: 8
+      Type: "NSArray<NSString *> * _Nullable"
+  - Selector: "doCopyCountryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:allowedCardNetworks:allowedCardAuthMethods:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(countryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:)"
+    SwiftName: "doCopy(countryCode:gateway:currencyCode:amount:gatewayMerchantID:merchantId:merchantName:allowedCardNetworks:allowedCardAuthMethods:)"
     ResultType: "MHSNativePayDataGooglePay * _Nonnull"
     Parameters:
     - Position: 0
@@ -8082,6 +8118,10 @@ Classes:
       Type: "NSString * _Nullable"
     - Position: 6
       Type: "NSString * _Nullable"
+    - Position: 7
+      Type: "NSArray<NSString *> * _Nullable"
+    - Position: 8
+      Type: "NSArray<NSString *> * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
     SwiftName: "isEqual(_:)"
