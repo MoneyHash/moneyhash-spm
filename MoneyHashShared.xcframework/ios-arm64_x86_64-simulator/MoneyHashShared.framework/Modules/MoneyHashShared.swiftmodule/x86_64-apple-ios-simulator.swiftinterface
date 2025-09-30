@@ -480,11 +480,17 @@ extension MoneyHashShared.PaymentService {
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
   public func getPayoutInformation(payoutIntentId: Swift.String) async throws -> MoneyHashShared.PayoutDetails
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getSubscriptionPlanGroups(limit: MoneyHashShared.KotlinInt?, offset: MoneyHashShared.KotlinInt?, currency: Swift.String?) async throws -> MoneyHashShared.SubscriptionPlanGroupsResponse
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getSubscriptionPlans(planGroupId: Swift.String, customerId: Swift.String) async throws -> [MoneyHashShared.SubscriptionPlan]
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
   public func resetPaymentSelectedMethod(paymentIntentId: Swift.String) async throws -> MoneyHashShared.PaymentIntentData
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
   public func resetPayoutSelectedMethod(payoutIntentId: Swift.String) async throws -> MoneyHashShared.PayoutDetails
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
   public func selectInstallmentPlan(intentId: Swift.String, installmentPlanData: MoneyHashShared.InstallmentPlanData) async throws -> MoneyHashShared.PaymentIntentData
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func selectSubscriptionPlan(planGroupId: Swift.String, customerId: Swift.String, planId: Swift.String) async throws -> MoneyHashShared.PaymentIntentData
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
   public func submitCardCVV(intentId: Swift.String, cvv: Swift.String, installmentPlanData: MoneyHashShared.InstallmentPlanData?) async throws -> MoneyHashShared.PaymentIntentData
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
@@ -522,6 +528,10 @@ extension MoneyHashShared.PaymentUseCase {
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
   public func getPayoutInformation(payoutId: Swift.String) async throws -> MoneyHashShared.PayoutDetails
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getSubscriptionPlanGroups(limit: MoneyHashShared.KotlinInt?, offset: MoneyHashShared.KotlinInt?, currency: Swift.String?) async throws -> MoneyHashShared.SubscriptionPlanGroupsResponse
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getSubscriptionPlans(planGroupId: Swift.String, customerId: Swift.String) async throws -> [MoneyHashShared.SubscriptionPlan]
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
   public func proceedWithPaymentMethod(intentId: Swift.String, selectedMethodId: Swift.String, methodType: MoneyHashShared.MethodType, metaData: MoneyHashShared.MethodMetaData?, useWalletBalance: MoneyHashShared.KotlinBoolean?, installmentPlanData: MoneyHashShared.InstallmentPlanData?) async throws -> MoneyHashShared.KotlinPair<MoneyHashShared.IntentMethods, MoneyHashShared.PaymentInformation>
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
   public func proceedWithPayoutMethod(intentId: Swift.String, selectedMethodId: Swift.String, methodType: MoneyHashShared.MethodType, metaData: MoneyHashShared.MethodMetaData?) async throws -> MoneyHashShared.KotlinPair<MoneyHashShared.IntentMethods, MoneyHashShared.PayoutData>
@@ -531,6 +541,8 @@ extension MoneyHashShared.PaymentUseCase {
   public func resetPayoutSelectedMethod(intentId: Swift.String) async throws -> MoneyHashShared.KotlinPair<MoneyHashShared.IntentMethods, MoneyHashShared.PayoutData>
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
   public func selectInstallmentPlan(intentId: Swift.String, installmentPlanData: MoneyHashShared.InstallmentPlanData) async throws -> MoneyHashShared.PaymentIntentData
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func selectSubscriptionPlan(planGroupId: Swift.String, customerId: Swift.String, planId: Swift.String) async throws -> MoneyHashShared.PaymentIntentData
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
   public func submitCardCVV(intentId: Swift.String, cvv: Swift.String, installmentPlanData: MoneyHashShared.InstallmentPlanData?) async throws -> MoneyHashShared.PaymentIntentData
   @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
@@ -927,6 +939,51 @@ extension MoneyHashShared.KotlinKVariance {
 }
 extension MoneyHashShared.__KotlinKVariance {
   public func toSwiftEnum() -> MoneyHashShared.KotlinKVariance
+}
+@frozen public enum SubscriptionStatus : Swift.Hashable, Swift.CaseIterable, Swift._ObjectiveCBridgeable {
+  case theNew
+  case trial
+  case incomplete
+  case active
+  case pastDue
+  case pendingCancellation
+  case cancelled
+  case ended
+  case terminated
+  case paused
+  public var name: Swift.String {
+    get
+  }
+  public var ordinal: Swift.Int32 {
+    get
+  }
+  public var status: Swift.String {
+    get
+  }
+  public static var companion: MoneyHashShared.__SubscriptionStatus.Companion {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: MoneyHashShared.__SubscriptionStatus, result: inout MoneyHashShared.SubscriptionStatus?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: MoneyHashShared.__SubscriptionStatus, result: inout MoneyHashShared.SubscriptionStatus?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: MoneyHashShared.__SubscriptionStatus?) -> MoneyHashShared.SubscriptionStatus
+  public func _bridgeToObjectiveC() -> MoneyHashShared.__SubscriptionStatus
+  public typealias _ObjectiveCType = MoneyHashShared.__SubscriptionStatus
+  public typealias Companion = MoneyHashShared.__SubscriptionStatus.Companion
+  public static func == (a: MoneyHashShared.SubscriptionStatus, b: MoneyHashShared.SubscriptionStatus) -> Swift.Bool
+  public typealias AllCases = [MoneyHashShared.SubscriptionStatus]
+  nonisolated public static var allCases: [MoneyHashShared.SubscriptionStatus] {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension MoneyHashShared.SubscriptionStatus {
+  public func toKotlinEnum() -> MoneyHashShared.__SubscriptionStatus
+}
+extension MoneyHashShared.__SubscriptionStatus {
+  public func toSwiftEnum() -> MoneyHashShared.SubscriptionStatus
 }
 @frozen public enum LastUsedMethodType : Swift.Hashable, Swift.CaseIterable, Swift._ObjectiveCBridgeable {
   case customerBalance
@@ -2050,6 +2107,8 @@ public var JsonWithIgnoredUnknownKeys: MoneyHashShared.Kotlinx_serialization_jso
 }
 extension MoneyHashShared.KotlinKVariance : Swift.Sendable {}
 extension MoneyHashShared.KotlinKVariance : Swift.BitwiseCopyable {}
+extension MoneyHashShared.SubscriptionStatus : Swift.Sendable {}
+extension MoneyHashShared.SubscriptionStatus : Swift.BitwiseCopyable {}
 extension MoneyHashShared.LastUsedMethodType : Swift.Sendable {}
 extension MoneyHashShared.LastUsedMethodType : Swift.BitwiseCopyable {}
 extension MoneyHashShared.MethodType : Swift.Sendable {}
