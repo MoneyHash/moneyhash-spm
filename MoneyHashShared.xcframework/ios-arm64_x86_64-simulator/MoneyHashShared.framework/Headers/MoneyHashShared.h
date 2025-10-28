@@ -8251,6 +8251,7 @@ __attribute__((swift_name("CardCollector")))
 */
 - (void)payIntentId:(NSString *)intentId cardData:(MHSVaultData *)cardData saveCard:(BOOL)saveCard billingFields:(NSDictionary<NSString *, NSString *> * _Nullable)billingFields shippingFields:(NSDictionary<NSString *, NSString *> * _Nullable)shippingFields installmentPlanData:(MHSInstallmentPlanData * _Nullable)installmentPlanData completionHandler:(void (^)(MHSPaymentIntentData * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("pay(intentId:cardData:saveCard:billingFields:shippingFields:installmentPlanData:completionHandler:)")));
 - (void)registerFieldFieldType:(MHSFieldType *)fieldType collectableField:(MHSSecureTextFieldVM *)collectableField __attribute__((swift_name("registerField(fieldType:collectableField:)")));
+- (MHSCardFieldState *)updateFieldFieldType:(MHSFieldType *)fieldType inputValue:(NSString *)inputValue __attribute__((swift_name("updateField(fieldType:inputValue:)")));
 - (MHSCardFormState *)validate __attribute__((swift_name("validate()")));
 @end
 

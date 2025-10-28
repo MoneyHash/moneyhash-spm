@@ -9576,6 +9576,15 @@ Classes:
       Type: "MHSFieldType * _Nonnull"
     - Position: 1
       Type: "MHSSecureTextFieldVM * _Nonnull"
+  - Selector: "updateFieldFieldType:inputValue:"
+    MethodKind: "Instance"
+    SwiftName: "updateField(fieldType:inputValue:)"
+    ResultType: "MHSCardFieldState * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "MHSFieldType * _Nonnull"
+    - Position: 1
+      Type: "NSString * _Nonnull"
   - Selector: "validate"
     MethodKind: "Instance"
     SwiftName: "validate()"
