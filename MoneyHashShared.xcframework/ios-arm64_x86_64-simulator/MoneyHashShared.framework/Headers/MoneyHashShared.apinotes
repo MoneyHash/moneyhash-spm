@@ -2281,6 +2281,10 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "brandSettings"
     Type: "MHSBrandSettingsData * _Nullable"
+  - Name: "customerLastUsedPaymentMethod"
+    PropertyKind: "Instance"
+    SwiftName: "customerLastUsedPaymentMethod"
+    Type: "NSString * _Nullable"
   - Name: "intent"
     PropertyKind: "Instance"
     SwiftName: "intent"
@@ -2326,9 +2330,9 @@ Classes:
     SwiftName: "wallet"
     Type: "MHSDouble * _Nullable"
   Methods:
-  - Selector: "initWithIntentSdkState:selectedMethod:nextAction:intentSecret:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:subscriptionPlanDetails:subscription:savedBankAccounts:"
+  - Selector: "initWithIntentSdkState:selectedMethod:nextAction:intentSecret:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:customerLastUsedPaymentMethod:subscriptionPlanDetails:subscription:savedBankAccounts:"
     MethodKind: "Instance"
-    SwiftName: "init(intentSdkState:selectedMethod:nextAction:intentSecret:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:subscriptionPlanDetails:subscription:savedBankAccounts:)"
+    SwiftName: "init(intentSdkState:selectedMethod:nextAction:intentSecret:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:customerLastUsedPaymentMethod:subscriptionPlanDetails:subscription:savedBankAccounts:)"
     Parameters:
     - Position: 0
       Type: "MHSIntentState * _Nullable"
@@ -2351,14 +2355,16 @@ Classes:
     - Position: 9
       Type: "MHSLastUsedMethod * _Nullable"
     - Position: 10
-      Type: "MHSSubscriptionPlan * _Nullable"
+      Type: "NSString * _Nullable"
     - Position: 11
-      Type: "MHSSubscription * _Nullable"
+      Type: "MHSSubscriptionPlan * _Nullable"
     - Position: 12
+      Type: "MHSSubscription * _Nullable"
+    - Position: 13
       Type: "NSArray<MHSSavedBankAccount *> * _Nullable"
-  - Selector: "doCopyIntentSdkState:selectedMethod:nextAction:intentSecret:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:subscriptionPlanDetails:subscription:savedBankAccounts:"
+  - Selector: "doCopyIntentSdkState:selectedMethod:nextAction:intentSecret:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:customerLastUsedPaymentMethod:subscriptionPlanDetails:subscription:savedBankAccounts:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(intentSdkState:selectedMethod:nextAction:intentSecret:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:subscriptionPlanDetails:subscription:savedBankAccounts:)"
+    SwiftName: "doCopy(intentSdkState:selectedMethod:nextAction:intentSecret:intent:savedCards:wallet:brandSettings:actionData:lastUsedMethod:customerLastUsedPaymentMethod:subscriptionPlanDetails:subscription:savedBankAccounts:)"
     ResultType: "MHSPaymentInformation * _Nonnull"
     Parameters:
     - Position: 0
@@ -2382,10 +2388,12 @@ Classes:
     - Position: 9
       Type: "MHSLastUsedMethod * _Nullable"
     - Position: 10
-      Type: "MHSSubscriptionPlan * _Nullable"
+      Type: "NSString * _Nullable"
     - Position: 11
-      Type: "MHSSubscription * _Nullable"
+      Type: "MHSSubscriptionPlan * _Nullable"
     - Position: 12
+      Type: "MHSSubscription * _Nullable"
+    - Position: 13
       Type: "NSArray<MHSSavedBankAccount *> * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
@@ -7307,10 +7315,18 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "customerBalances"
     Type: "NSArray<MHSCustomerBalance *> * _Nullable"
+  - Name: "customerLastUsedPaymentMethod"
+    PropertyKind: "Instance"
+    SwiftName: "customerLastUsedPaymentMethod"
+    Type: "NSString * _Nullable"
   - Name: "expressMethods"
     PropertyKind: "Instance"
     SwiftName: "expressMethods"
     Type: "NSArray<MHSIntentMethodItem *> * _Nullable"
+  - Name: "lastUsedMethod"
+    PropertyKind: "Instance"
+    SwiftName: "lastUsedMethod"
+    Type: "MHSLastUsedMethod * _Nullable"
   - Name: "paymentMethods"
     PropertyKind: "Instance"
     SwiftName: "paymentMethods"
@@ -7324,9 +7340,9 @@ Classes:
     SwiftName: "savedCards"
     Type: "NSArray<MHSSavedCard *> * _Nullable"
   Methods:
-  - Selector: "initWithPaymentMethods:expressMethods:savedCards:customerBalances:savedBankAccounts:"
+  - Selector: "initWithPaymentMethods:expressMethods:savedCards:customerBalances:savedBankAccounts:lastUsedMethod:customerLastUsedPaymentMethod:"
     MethodKind: "Instance"
-    SwiftName: "init(paymentMethods:expressMethods:savedCards:customerBalances:savedBankAccounts:)"
+    SwiftName: "init(paymentMethods:expressMethods:savedCards:customerBalances:savedBankAccounts:lastUsedMethod:customerLastUsedPaymentMethod:)"
     Parameters:
     - Position: 0
       Type: "NSArray<MHSIntentMethodItem *> * _Nullable"
@@ -7338,9 +7354,13 @@ Classes:
       Type: "NSArray<MHSCustomerBalance *> * _Nullable"
     - Position: 4
       Type: "NSArray<MHSSavedBankAccount *> * _Nullable"
-  - Selector: "doCopyPaymentMethods:expressMethods:savedCards:customerBalances:savedBankAccounts:"
+    - Position: 5
+      Type: "MHSLastUsedMethod * _Nullable"
+    - Position: 6
+      Type: "NSString * _Nullable"
+  - Selector: "doCopyPaymentMethods:expressMethods:savedCards:customerBalances:savedBankAccounts:lastUsedMethod:customerLastUsedPaymentMethod:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(paymentMethods:expressMethods:savedCards:customerBalances:savedBankAccounts:)"
+    SwiftName: "doCopy(paymentMethods:expressMethods:savedCards:customerBalances:savedBankAccounts:lastUsedMethod:customerLastUsedPaymentMethod:)"
     ResultType: "MHSPaymentMethodsData * _Nonnull"
     Parameters:
     - Position: 0
@@ -7353,6 +7373,10 @@ Classes:
       Type: "NSArray<MHSCustomerBalance *> * _Nullable"
     - Position: 4
       Type: "NSArray<MHSSavedBankAccount *> * _Nullable"
+    - Position: 5
+      Type: "MHSLastUsedMethod * _Nullable"
+    - Position: 6
+      Type: "NSString * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
     SwiftName: "isEqual(_:)"
@@ -8623,6 +8647,10 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "embedUrl"
     Type: "NSString * _Nonnull"
+  - Name: "vaultFormImagesUrl"
+    PropertyKind: "Instance"
+    SwiftName: "vaultFormImagesUrl"
+    Type: "NSString * _Nonnull"
   - Name: "vaultUrl"
     PropertyKind: "Instance"
     SwiftName: "vaultUrl"
@@ -9073,6 +9101,10 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "customerBalances"
     Type: "NSArray<MHSCustomerBalance *> * _Nullable"
+  - Name: "customerLastUsedMethod"
+    PropertyKind: "Instance"
+    SwiftName: "customerLastUsedMethod"
+    Type: "MHSCustomerLastUsedMethod * _Nullable"
   - Name: "expressMethods"
     PropertyKind: "Instance"
     SwiftName: "expressMethods"
@@ -9094,9 +9126,9 @@ Classes:
     SwiftName: "savedCards"
     Type: "NSArray<MHSSavedCard *> * _Nullable"
   Methods:
-  - Selector: "initWithCustomerBalances:paymentMethods:expressMethods:savedCards:payoutMethods:savedBankAccounts:"
+  - Selector: "initWithCustomerBalances:paymentMethods:expressMethods:savedCards:payoutMethods:savedBankAccounts:customerLastUsedMethod:"
     MethodKind: "Instance"
-    SwiftName: "init(customerBalances:paymentMethods:expressMethods:savedCards:payoutMethods:savedBankAccounts:)"
+    SwiftName: "init(customerBalances:paymentMethods:expressMethods:savedCards:payoutMethods:savedBankAccounts:customerLastUsedMethod:)"
     Parameters:
     - Position: 0
       Type: "NSArray<MHSCustomerBalance *> * _Nullable"
@@ -9110,9 +9142,11 @@ Classes:
       Type: "NSArray<MHSPayoutMethod *> * _Nullable"
     - Position: 5
       Type: "NSArray<MHSSavedBankAccount *> * _Nullable"
-  - Selector: "doCopyCustomerBalances:paymentMethods:expressMethods:savedCards:payoutMethods:savedBankAccounts:"
+    - Position: 6
+      Type: "MHSCustomerLastUsedMethod * _Nullable"
+  - Selector: "doCopyCustomerBalances:paymentMethods:expressMethods:savedCards:payoutMethods:savedBankAccounts:customerLastUsedMethod:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(customerBalances:paymentMethods:expressMethods:savedCards:payoutMethods:savedBankAccounts:)"
+    SwiftName: "doCopy(customerBalances:paymentMethods:expressMethods:savedCards:payoutMethods:savedBankAccounts:customerLastUsedMethod:)"
     ResultType: "MHSIntentMethods * _Nonnull"
     Parameters:
     - Position: 0
@@ -9127,6 +9161,8 @@ Classes:
       Type: "NSArray<MHSPayoutMethod *> * _Nullable"
     - Position: 5
       Type: "NSArray<MHSSavedBankAccount *> * _Nullable"
+    - Position: 6
+      Type: "MHSCustomerLastUsedMethod * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
     SwiftName: "isEqual(_:)"
@@ -9144,6 +9180,65 @@ Classes:
     ResultType: "NSString * _Nonnull"
 - Name: "MHSIntentMethodsCompanion"
   SwiftName: "IntentMethods.Companion"
+  Methods:
+  - Selector: "serializer"
+    MethodKind: "Instance"
+    SwiftName: "serializer()"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+- Name: "MHSCustomerLastUsedMethod"
+  SwiftName: "CustomerLastUsedMethod"
+  Properties:
+  - Name: "id"
+    PropertyKind: "Instance"
+    SwiftName: "id"
+    Type: "NSString * _Nullable"
+  - Name: "method"
+    PropertyKind: "Instance"
+    SwiftName: "method"
+    Type: "NSString * _Nullable"
+  - Name: "type"
+    PropertyKind: "Instance"
+    SwiftName: "type"
+    Type: "MHSLastUsedMethodType * _Nullable"
+  Methods:
+  - Selector: "initWithId:method:type:"
+    MethodKind: "Instance"
+    SwiftName: "init(id:method:type:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "NSString * _Nullable"
+    - Position: 2
+      Type: "MHSLastUsedMethodType * _Nullable"
+  - Selector: "doCopyId:method:type:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(id:method:type:)"
+    ResultType: "MHSCustomerLastUsedMethod * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "NSString * _Nullable"
+    - Position: 2
+      Type: "MHSLastUsedMethodType * _Nullable"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "MHSCustomerLastUsedMethodCompanion"
+  SwiftName: "CustomerLastUsedMethod.Companion"
   Methods:
   - Selector: "serializer"
     MethodKind: "Instance"
@@ -10568,6 +10663,10 @@ Classes:
   - Name: "amex"
     PropertyKind: "Class"
     SwiftName: "amex"
+    Type: "MHSBrand * _Nonnull"
+  - Name: "jaywan"
+    PropertyKind: "Class"
+    SwiftName: "jaywan"
     Type: "MHSBrand * _Nonnull"
   - Name: "unknown"
     PropertyKind: "Class"
@@ -12734,10 +12833,6 @@ Classes:
   - Name: "AREA_API_NAME_FILED"
     PropertyKind: "Instance"
     SwiftName: "AREA_API_NAME_FILED"
-    Type: "NSString * _Nonnull"
-  - Name: "BASE_VAULT_FORM"
-    PropertyKind: "Instance"
-    SwiftName: "BASE_VAULT_FORM"
     Type: "NSString * _Nonnull"
   - Name: "CARD_NUMBER_FORMAT"
     PropertyKind: "Instance"
