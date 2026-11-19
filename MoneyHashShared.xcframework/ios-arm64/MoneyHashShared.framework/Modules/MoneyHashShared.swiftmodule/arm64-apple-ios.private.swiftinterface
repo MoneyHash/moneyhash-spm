@@ -2070,6 +2070,7 @@ extension MoneyHashShared.Skie.moneyhash_kmm__MoneyHashShared.NativePayData {
   @frozen public enum __Sealed : Swift.Hashable {
     case applePayData(MoneyHashShared.NativePayData.ApplePayData)
     case googlePay(MoneyHashShared.NativePayData.GooglePay)
+    case samsungPay(MoneyHashShared.NativePayData.SamsungPay)
     public static func == (a: MoneyHashShared.Skie.moneyhash_kmm__MoneyHashShared.NativePayData.__Sealed, b: MoneyHashShared.Skie.moneyhash_kmm__MoneyHashShared.NativePayData.__Sealed) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {

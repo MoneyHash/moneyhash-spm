@@ -3855,6 +3855,10 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "methodID"
     Type: "NSString * _Nullable"
+  - Name: "serviceId"
+    PropertyKind: "Instance"
+    SwiftName: "serviceId"
+    Type: "NSString * _Nullable"
   - Name: "supportedNetworks"
     PropertyKind: "Instance"
     SwiftName: "supportedNetworks"
@@ -3864,9 +3868,9 @@ Classes:
     SwiftName: "supportedRegions"
     Type: "NSArray<NSString *> * _Nullable"
   Methods:
-  - Selector: "initWithCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:"
+  - Selector: "initWithCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:serviceId:"
     MethodKind: "Instance"
-    SwiftName: "init(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:)"
+    SwiftName: "init(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:serviceId:)"
     Parameters:
     - Position: 0
       Type: "NSString * _Nullable"
@@ -3894,9 +3898,11 @@ Classes:
       Type: "NSArray<NSString *> * _Nullable"
     - Position: 12
       Type: "NSArray<NSString *> * _Nullable"
-  - Selector: "doCopyCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:"
+    - Position: 13
+      Type: "NSString * _Nullable"
+  - Selector: "doCopyCountryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:serviceId:"
     MethodKind: "Instance"
-    SwiftName: "doCopy(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:)"
+    SwiftName: "doCopy(countryCode:merchantId:currencyCode:supportedRegions:amount:supportedNetworks:gateway:gatewayMerchantID:merchantName:methodID:merchantCapabilities:allowedCardNetworks:allowedCardAuthMethods:serviceId:)"
     ResultType: "MHSNativePaymentData * _Nonnull"
     Parameters:
     - Position: 0
@@ -3925,6 +3931,8 @@ Classes:
       Type: "NSArray<NSString *> * _Nullable"
     - Position: 12
       Type: "NSArray<NSString *> * _Nullable"
+    - Position: 13
+      Type: "NSString * _Nullable"
   - Selector: "isEqual:"
     MethodKind: "Instance"
     SwiftName: "isEqual(_:)"
@@ -9656,6 +9664,97 @@ Classes:
     MethodKind: "Instance"
     SwiftName: "serializer()"
     ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
+- Name: "MHSNativePayDataSamsungPay"
+  SwiftName: "NativePayData.SamsungPay"
+  Properties:
+  - Name: "allowedCardNetworks"
+    PropertyKind: "Instance"
+    SwiftName: "allowedCardNetworks"
+    Type: "NSArray<NSString *> * _Nullable"
+  - Name: "amount"
+    PropertyKind: "Instance"
+    SwiftName: "amount"
+    Type: "MHSDouble * _Nullable"
+  - Name: "countryCode"
+    PropertyKind: "Instance"
+    SwiftName: "countryCode"
+    Type: "NSString * _Nullable"
+  - Name: "currencyCode"
+    PropertyKind: "Instance"
+    SwiftName: "currencyCode"
+    Type: "NSString * _Nullable"
+  - Name: "merchantId"
+    PropertyKind: "Instance"
+    SwiftName: "merchantId"
+    Type: "NSString * _Nullable"
+  - Name: "merchantName"
+    PropertyKind: "Instance"
+    SwiftName: "merchantName"
+    Type: "NSString * _Nullable"
+  - Name: "serviceId"
+    PropertyKind: "Instance"
+    SwiftName: "serviceId"
+    Type: "NSString * _Nullable"
+  Methods:
+  - Selector: "initWithServiceId:merchantName:merchantId:countryCode:currencyCode:amount:allowedCardNetworks:"
+    MethodKind: "Instance"
+    SwiftName: "init(serviceId:merchantName:merchantId:countryCode:currencyCode:amount:allowedCardNetworks:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "NSString * _Nullable"
+    - Position: 2
+      Type: "NSString * _Nullable"
+    - Position: 3
+      Type: "NSString * _Nullable"
+    - Position: 4
+      Type: "NSString * _Nullable"
+    - Position: 5
+      Type: "MHSDouble * _Nullable"
+    - Position: 6
+      Type: "NSArray<NSString *> * _Nullable"
+  - Selector: "doCopyServiceId:merchantName:merchantId:countryCode:currencyCode:amount:allowedCardNetworks:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(serviceId:merchantName:merchantId:countryCode:currencyCode:amount:allowedCardNetworks:)"
+    ResultType: "MHSNativePayDataSamsungPay * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "NSString * _Nullable"
+    - Position: 2
+      Type: "NSString * _Nullable"
+    - Position: 3
+      Type: "NSString * _Nullable"
+    - Position: 4
+      Type: "NSString * _Nullable"
+    - Position: 5
+      Type: "MHSDouble * _Nullable"
+    - Position: 6
+      Type: "NSArray<NSString *> * _Nullable"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "MHSNativePayDataSamsungPayCompanion"
+  SwiftName: "NativePayData.SamsungPayCompanion"
+  Methods:
+  - Selector: "serializer"
+    MethodKind: "Instance"
+    SwiftName: "serializer()"
+    ResultType: "id<MHSKotlinx_serialization_coreKSerializer> _Nonnull"
 - Name: "MHSInputField"
   SwiftName: "InputField"
   Properties:
@@ -12834,6 +12933,10 @@ Classes:
     PropertyKind: "Instance"
     SwiftName: "AREA_API_NAME_FILED"
     Type: "NSString * _Nonnull"
+  - Name: "BASE_VAULT_FORM"
+    PropertyKind: "Instance"
+    SwiftName: "BASE_VAULT_FORM"
+    Type: "NSString * _Nonnull"
   - Name: "CARD_NUMBER_FORMAT"
     PropertyKind: "Instance"
     SwiftName: "CARD_NUMBER_FORMAT"
@@ -12901,6 +13004,10 @@ Classes:
   - Name: "PUBLIC_KEY_HEADER_KEY"
     PropertyKind: "Instance"
     SwiftName: "PUBLIC_KEY_HEADER_KEY"
+    Type: "NSString * _Nonnull"
+  - Name: "SAMSUNG_PAY"
+    PropertyKind: "Instance"
+    SwiftName: "SAMSUNG_PAY"
     Type: "NSString * _Nonnull"
   - Name: "SDK_LOGS_END_POINT"
     PropertyKind: "Instance"

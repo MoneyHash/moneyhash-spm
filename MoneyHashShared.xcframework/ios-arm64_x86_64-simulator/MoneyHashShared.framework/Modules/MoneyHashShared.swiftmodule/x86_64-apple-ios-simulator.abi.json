@@ -3545,6 +3545,57 @@
                       },
                       {
                         "kind": "Var",
+                        "name": "samsungPay",
+                        "printedName": "samsungPay",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(MoneyHashShared.Skie.moneyhash_kmm__MoneyHashShared.NativePayData.__Sealed.Type) -> (MoneyHashShared.NativePayData.SamsungPay) -> MoneyHashShared.Skie.moneyhash_kmm__MoneyHashShared.NativePayData.__Sealed",
+                            "children": [
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "(MoneyHashShared.NativePayData.SamsungPay) -> MoneyHashShared.Skie.moneyhash_kmm__MoneyHashShared.NativePayData.__Sealed",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "__Sealed",
+                                    "printedName": "MoneyHashShared.Skie.moneyhash_kmm__MoneyHashShared.NativePayData.__Sealed",
+                                    "usr": "s:15MoneyHashShared4SkieO015moneyhash_kmm__abC0O13NativePayDataO8__SealedO"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "SamsungPay",
+                                    "printedName": "MoneyHashShared.NativePayData.SamsungPay",
+                                    "usr": "c:objc(cs)MHSNativePayDataSamsungPay"
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Metatype",
+                                "printedName": "MoneyHashShared.Skie.moneyhash_kmm__MoneyHashShared.NativePayData.__Sealed.Type",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "__Sealed",
+                                    "printedName": "MoneyHashShared.Skie.moneyhash_kmm__MoneyHashShared.NativePayData.__Sealed",
+                                    "usr": "s:15MoneyHashShared4SkieO015moneyhash_kmm__abC0O13NativePayDataO8__SealedO"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "declKind": "EnumElement",
+                        "usr": "s:15MoneyHashShared4SkieO015moneyhash_kmm__abC0O13NativePayDataO8__SealedO07samsungH0yAISo09MHSNativehi7SamsungH0CcAImF",
+                        "mangledName": "$s15MoneyHashShared4SkieO015moneyhash_kmm__abC0O13NativePayDataO8__SealedO07samsungH0yAISo09MHSNativehi7SamsungH0CcAImF",
+                        "moduleName": "MoneyHashShared",
+                        "fixedbinaryorder": 2
+                      },
+                      {
+                        "kind": "Var",
                         "name": "hashValue",
                         "printedName": "hashValue",
                         "children": [
